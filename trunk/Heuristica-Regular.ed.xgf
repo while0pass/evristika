@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgridfit>
+ 
+ <!--
+     
+     Andrey V. Panov (C) 2009
+     
+     All rights reserved.
+     
+     This Font Software is licensed under the SIL Open Font License, Version 1.1.
+     This license is copied together with this font package in OFL.txt,
+     and is also available with a FAQ at:
+     http://scripts.sil.org/OFL
+     
+     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+     OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+     THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS
+     INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT
+     OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+     OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+     PERFORMANCE OF THIS SOFTWARE.
+     
+     -->
+
+ <!--
+ <alias name="small-cyrn-intersect-height" target="cv-3"/>
+ <alias name="cap-h-intersect-height" target="cv-4"/>
+     -->
+
+ <outfile fmflags="2560">Heuristica-Regular.ttf</outfile>
+
+ <alias name="small-vert-stem" target="cv-15"/>
+ <alias name="small-o-curve-stem" target="cv-17"/>
+ 
+ <pre-program>
+ <!--
+  <control-value-delta>
+   <delta-set cv="small-cyrn-intersect-height" size="1" distance="-8"/>
+   <delta-set cv="small-cyrn-intersect-height" size="5" distance="-8"/>
+   <delta-set cv="small-cyrn-intersect-height" size="9" distance="-8"/>
+   <delta-set cv="small-cyrn-intersect-height" size="13" distance="-8"/>
+   <delta-set cv="small-cyrn-intersect-height" size="17" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="1" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="4" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="7" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="9" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="10" distance="-8"/>
+   <delta-set cv="cap-h-intersect-height" size="12" distance="-8"/>
+  </control-value-delta>
+     -->
+  <if test="is-glyph-grayscale">
+  <if test="pixels-per-em &lt; 15 and pixels-per-em &gt; 11">
+ <!--
+   <round value="small-vert-stem" color="black"/>
+   <round value="small-o-curve-stem" color="black"/>
+     -->
+   <round value="cv-15" color="black"/>
+   <round value="cv-17" color="black"/>
+  </if>
+ <!--
+   <control-value-delta>
+     <delta-set cv="small-vert-stem" size="4" distance="-1"/>
+     <delta-set cv="small-vert-stem" size="5" distance="-2"/>
+   </control-value-delta>
+     -->
+  </if>
+ </pre-program>
+</xgridfit>
