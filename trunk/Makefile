@@ -48,8 +48,8 @@ $(FAMILY)-BoldItalic.ttf: $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.otf
 
 $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
 
-%.ttf: %.pe %.gen.ttf %.otf
-	fontforge -lang=ff -script $*.pe
+%.ttf: %.py %.gen.ttf %.otf
+	fontforge -lang=py -script $*.py
 
 #%.gen.ttf: %.otf
 
@@ -60,18 +60,17 @@ $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
 %.gen.xgf: %.gen.ttx
 	-rm $*.gen.xgf
 	ttx2xgf $*.gen.ttx
-#	patch -l --no-backup-if-mismatch < $*.gen.xgf.diff
 
 %.xml: %.gen.xgf %.ed.xgf
 	xgfmerge -o $@ $^
 
-%.pe: %.xml
+%.py: %.xml
 	xgridfit -p 25 -G no -i $*.gen.ttf -o $*.ttf $<
 
 #$(FAMILY)-Regular.ttf: $(FAMILY)-Regular.pe # $(FAMILY)-Regular.gen.ttf
 #	fontforge -lang=ff -script $(FAMILY)-Regular.pe
 
-.SECONDARY : *.pe *.xml *.gen.xgf *.gen.ttx
+.SECONDARY : *.py *.xml *.gen.xgf *.gen.ttx
 
 ttf: $(TTFFILES)
 
