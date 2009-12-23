@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xgridfit>
- 
- <!--
+<?xml version="1.0"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+
+  <!--
      
      Andrey V. Panov (C) 2009
      
@@ -23,19 +23,16 @@
      PERFORMANCE OF THIS SOFTWARE.
      
      -->
-
- <!--
+  <!--
  <alias name="small-cyrn-intersect-height" target="cv-3"/>
  <alias name="cap-h-intersect-height" target="cv-4"/>
      -->
+  <outfile fmflags="2560" pyflags="old-kern opentype">Heuristica-Regular.ttf</outfile>
+  <alias name="small-vert-stem" target="cv-15"/>
+  <alias name="small-o-curve-stem" target="cv-17"/>
 
- <outfile fmflags="2560">Heuristica-Regular.ttf</outfile>
-
- <alias name="small-vert-stem" target="cv-15"/>
- <alias name="small-o-curve-stem" target="cv-17"/>
- 
- <pre-program>
- <!--
+  <pre-program>
+    <!--
   <control-value-delta>
    <delta-set cv="small-cyrn-intersect-height" size="1" distance="-8"/>
    <delta-set cv="small-cyrn-intersect-height" size="5" distance="-8"/>
@@ -50,21 +47,22 @@
    <delta-set cv="cap-h-intersect-height" size="12" distance="-8"/>
   </control-value-delta>
      -->
-  <if test="is-glyph-grayscale">
-  <if test="pixels-per-em &lt; 15 and pixels-per-em &gt; 11">
- <!--
+    <if test="is-glyph-grayscale">
+      <if test="pixels-per-em &lt; 15 and pixels-per-em &gt; 11">
+        <!--
    <round value="small-vert-stem" color="black"/>
    <round value="small-o-curve-stem" color="black"/>
      -->
-   <round value="cv-15" color="black"/>
-   <round value="cv-17" color="black"/>
-  </if>
- <!--
+        <round value="cv-15" color="black"/>
+        <round value="cv-17" color="black"/>
+      </if>
+      <!--
    <control-value-delta>
      <delta-set cv="small-vert-stem" size="4" distance="-1"/>
      <delta-set cv="small-vert-stem" size="5" distance="-2"/>
    </control-value-delta>
      -->
-  </if>
- </pre-program>
+    </if>
+  </pre-program>
+
 </xgridfit>
