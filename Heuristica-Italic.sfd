@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1249731724
+ModificationTime: 1264595731
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -40,7 +40,8 @@ HheadAOffset: 0
 HheadDescent: -250
 HheadDOffset: 0
 OS2Vendor: 'PfEd'
-Lookup: 258 0 0 "LGC kerning"  {"LGC kerning subtable"  } ['kern' ('cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 258 0 0 "LGC kerning"  {"LGC kerning subtable" [150,15,0] } ['kern' ('cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+MarkAttachClasses: 1
 DEI: 91125
 LangName: 1049 "" "+BC0EMgRABDgEQQRCBDgEOgQw" 
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.+AAoA-Utopia is either a registered trademark or trademark of Adobe Systems+AAoA-Incorporated in the United States and/or other countries. Used under+AAoA-license.+AAoACgAA-Copyright (c) 2008, 2009 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" "http://scripts.sil.org/ofl" 
@@ -6653,6 +6654,7 @@ VStem: 210 77<-2 61> 444 96
 LayerCount: 2
 Fore
 Refer: 89 121 N 1 0 0 1 0 0 2
+Kerns2: 262 38 "LGC kerning subtable"  310 -23 "LGC kerning subtable"  309 -38 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10081
@@ -7297,6 +7299,7 @@ SplineSet
  451 243 418 279 360 279 c 0
  319 279 260 251 229 185 c 1
 EndSplineSet
+Kerns2: 282 -53 "LGC kerning subtable"  262 -33 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10093
@@ -7347,6 +7350,7 @@ SplineSet
  359 34 315 -12 229 -12 c 256
  134 -12 80 34 80 89 c 256
 EndSplineSet
+Kerns2: 282 -29 "LGC kerning subtable"  270 -24 "LGC kerning subtable"  14 -22 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10066
@@ -8306,7 +8310,7 @@ SplineSet
 EndSplineSet
 Fore
 SplineSet
-676 583 m 0
+676 583 m 0xae
  676 609 690 629 690 655 c 0
  690 666 680 672 667 672 c 0
  642 672 599 619 567 548 c 0
@@ -8325,8 +8329,8 @@ SplineSet
  563 640 608 707 672 707 c 0
  750 707 778 662 778 618 c 0
  778 573 761 546 722 546 c 0
- 695 546 676 563 676 583 c 0
-40 0 m 1
+ 695 546 676 563 676 583 c 0xae
+40 0 m 1x76
  46 29 l 1
  101 35 l 2
  125 37 136 51 143 83 c 2
@@ -8342,9 +8346,9 @@ SplineSet
  232 52 237 35 261 33 c 2
  320 29 l 1
  314 0 l 1
- 40 0 l 1
+ 40 0 l 1x76
 EndSplineSet
-Kerns2: 240 -40 "LGC kerning subtable" 
+Kerns2: 262 -38 "LGC kerning subtable"  248 -43 "LGC kerning subtable"  240 -40 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10095
@@ -8454,6 +8458,7 @@ SplineSet
  445 59 349 -12 228 -12 c 0
  112 -12 54 52 54 125 c 0xf8
 EndSplineSet
+Kerns2: 282 -26 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10088
@@ -8679,26 +8684,26 @@ SplineSet
 EndSplineSet
 Fore
 SplineSet
-243 383 m 1
+243 383 m 1xe4
  535 383 l 1
  527 345 l 1
  235 345 l 1
- 243 383 l 1
-61 122 m 0
+ 243 383 l 1xe4
+61 122 m 0xf4
  61 184 83 206 121 206 c 0
- 152 206 172 189 172 158 c 0
+ 152 206 172 189 172 158 c 0xf4
  172 130 162 107 162 89 c 0
  162 56 196 20 267 20 c 0
  448 20 534 300 534 451 c 0
  534 567 459 672 379 672 c 0
  305 672 237 645 181 496 c 1
- 149 496 l 1
+ 149 496 l 1xec
  188 666 l 1
  238 687 287 707 379 707 c 0
  526 707 639 565 639 421 c 0
  639 338 612 200 529 105 c 0
  468 35 399 -15 255 -15 c 0
- 194 -15 61 30 61 122 c 0
+ 194 -15 61 30 61 122 c 0xf4
 EndSplineSet
 EndChar
 
@@ -8734,12 +8739,12 @@ SplineSet
 EndSplineSet
 Fore
 SplineSet
-62 123 m 0
+62 123 m 0xfa
  62 162 68 206 123 206 c 0
  156 206 173 182 173 161 c 0
  173 127 162 117 162 89 c 0
  162 50 208 20 261 20 c 0
- 373 20 464 104 464 216 c 0
+ 373 20 464 104 464 216 c 0xfa
  464 303 401 349 303 349 c 2
  244 349 l 1
  252 387 l 1
@@ -8750,12 +8755,12 @@ SplineSet
  150 496 l 1
  188 661 l 1
  237 686 298 707 376 707 c 0
- 496 707 611 656 611 547 c 0
+ 496 707 611 656 611 547 c 0xf5
  611 484 581 398 424 373 c 1
  423 370 l 1
  504 353 571 297 571 206 c 0
  571 136 525 -15 249 -15 c 0
- 167 -15 62 46 62 123 c 0
+ 167 -15 62 46 62 123 c 0xfa
 EndSplineSet
 EndChar
 
@@ -9201,7 +9206,7 @@ SplineSet
  180 210 l 1
  180 202 178 189 178 182 c 0
 EndSplineSet
-Kerns2: 262 -54 "LGC kerning subtable" 
+Kerns2: 282 -29 "LGC kerning subtable"  262 -41 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10076

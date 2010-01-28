@@ -45,12 +45,13 @@ DEI: 91125
 LangName: 1049 "" "+BC0EMgRABDgEQQRCBDgEOgQw" 
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.+AAoA-Utopia is either a registered trademark or trademark of Adobe Systems+AAoA-Incorporated in the United States and/or other countries. Used under+AAoA-license.+AAoACgAA-Copyright (c) 2008, 2009 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" 
 Encoding: UnicodeBmp
+Compacted: 1
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 32 16 14
+WinInfo: 144 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 41 [ -242 -230 -168 -168 -190 -190 557 566 ]
@@ -6338,7 +6339,7 @@ EndChar
 StartChar: afii10082
 Encoding: 1088 1088 251
 Width: 615
-Flags: HW
+Flags: W
 HStem: -230 38<19 79.9676 240.102 318> -12 46<260.503 374.213> 425 77<307.099 447> 437 36<25 60>
 VStem: 84 151<-185.368 0 60.4648 393.044> 422 159<123.296 371.906>
 LayerCount: 2
@@ -6366,6 +6367,7 @@ DStem2: 287 332 201 227 0.568344 -0.822791<-127.505 0 94.1192 246.503>
 LayerCount: 2
 Fore
 Refer: 88 120 N 1 0 0 1 0 0 3
+Kerns2: 321 22 "LGC kerning subtable"  263 29 "LGC kerning subtable"  288 29 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10102
@@ -6476,6 +6478,7 @@ DStem2: 218 413 59 406 0.373272 -0.927722<-26.6276 296.535>
 LayerCount: 2
 Fore
 Refer: 89 121 N 1 0 0 1 0 0 3
+Kerns2: 321 18 "LGC kerning subtable"  298 32 "LGC kerning subtable"  288 22 "LGC kerning subtable"  322 -24 "LGC kerning subtable"  308 -18 "LGC kerning subtable"  307 -57 "LGC kerning subtable"  253 63 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10033
@@ -6913,7 +6916,7 @@ SplineSet
  645 50 544 0 363 0 c 6
  33 0 l 5
 EndSplineSet
-Kerns2: 245 -77 "LGC kerning subtable" 
+Kerns2: 275 -63 "LGC kerning subtable"  245 -77 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10048
@@ -7061,9 +7064,9 @@ EndChar
 StartChar: afii10041
 Encoding: 1063 1063 275
 Width: 766
-Flags: HW
+Flags: W
 HStem: 0 38<415 487.725 660.275 733> 247 82<207.5 397.315> 654 38<25 97.7246 270.117 335 423 487.883 660.275 733>
-VStem: 104 160<349.871 453 453 646.946> 494 160<45.0538 313 411 646.946>
+VStem: 104 160<349.871 646.946> 494 160<45.0538 313 411 646.946>
 LayerCount: 2
 Fore
 SplineSet
@@ -7413,6 +7416,7 @@ SplineSet
  308 220 207 0 67 0 c 1
  64 46 l 1
 EndSplineSet
+Kerns2: 280 18 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10049
@@ -8336,7 +8340,7 @@ SplineSet
  544 28 466 0 314 0 c 2
  208 0 l 1
 EndSplineSet
-Kerns2: 304 -61 "LGC kerning subtable" 
+Kerns2: 298 -57 "LGC kerning subtable"  304 -61 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10089
@@ -8625,6 +8629,7 @@ SplineSet
  341 444 l 1
  340 490 l 1
 EndSplineSet
+Kerns2: 304 14 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10067
@@ -8907,6 +8912,7 @@ SplineSet
  221 222 185 0 68 0 c 1
  59 46 l 1
 EndSplineSet
+Kerns2: 308 14 "LGC kerning subtable"  263 18 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10075
