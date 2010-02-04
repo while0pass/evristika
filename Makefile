@@ -18,6 +18,13 @@ FFSCRIPTS=generate.ff make_dup_vertshift.pe new_glyph.ff add_anchor_ext.ff \
 #DIFFFILES=$(FAMILY)-Regular.gen.xgf.diff # $(FAMILY)-Italic.gen.xgf.diff $(FAMILY)-Bold.gen.xgf.diff $(FAMILY)-BoldItalic.gen.xgf.diff
 XGFFILES=$(FAMILY)-Regular.ed.xgf # $(FAMILY)-Italic.ed.xgf $(FAMILY)-Bold.ed.xgf $(FAMILY)-BoldItalic.ed.xgf
 COMPRESS=xz -9
+TEXENC=t1,t2a,t2b,t2c
+
+INSTALL=install
+DESTDIR=
+prefix=/usr
+fontdir=$(prefix)/share/fonts/TTF
+docdir=$(prefix)/doc/$(PKGNAME)
 
 all: $(OTFFILES) ttf
 
@@ -74,6 +81,25 @@ $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
 
 ttf: $(TTFFILES)
 
+tex-support: all
+	mkdir -p texmf
+	-rm -rf ./texmf/*
+	TEXMFVAR=`pwd`/texmf autoinst --encoding=$(TEXENC) \
+	--extra="--typeface=$(PKGNAME) --no-updmap  --vendor=public" \
+	$(OTFFILES)
+	mkdir -p texmf/fonts/enc/dvips/$(PKGNAME)
+	mv texmf/fonts/enc/dvips/public/* texmf/fonts/enc/dvips/$(PKGNAME)/
+	-rm -r texmf/fonts/enc/dvips/public
+	mkdir -p texmf/tex/latex/$(PKGNAME)
+	mkdir -p texmf/fonts/map/dvips/$(PKGNAME)
+	mv *$(FAMILY)-TLF.fd texmf/tex/latex/$(PKGNAME)/
+	mv $(FAMILY).sty texmf/tex/latex/$(PKGNAME)/$(PKGNAME).sty
+	mv $(FAMILY).map texmf/fonts/map/dvips/$(PKGNAME)/$(PKGNAME).map
+	mkdir -p texmf/dvips/$(PKGNAME)
+	echo "p +$(PKGNAME).map" > texmf/dvips/$(PKGNAME)/config.$(PKGNAME)
+	mkdir -p texmf/doc/fonts/$(PKGNAME)
+	cp -p $(DOCUMENTS) texmf/doc/fonts/$(PKGNAME)/
+
 dist-src:
 	tar -cvf $(PKGNAME)-src-$(VERSION).tar $(SFDFILES) Makefile \
 	$(FFSCRIPTS) $(DOCUMENTS) $(XGFFILES) $(DIFFFILES)
@@ -94,6 +120,12 @@ dist-pfb: all
 	$(PFBFILES) $(AFMFILES) $(DOCUMENTS)
 	$(COMPRESS) $(PKGNAME)-pfb-$(VERSION).tar
 
+dist-tex:
+	( cd ./texmf ;\
+	tar -cvf ../$(PKGNAME)-tex-$(VERSION).tar \
+	doc dvips fonts tex )
+	$(COMPRESS) $(PKGNAME)-tex-$(VERSION).tar
+
 dist: dist-src dist-otf dist-ttf
 
 update-version:
@@ -105,3 +137,9 @@ clean :
 
 distclean :
 	-rm $(OTFFILES) $(TTFFILES) $(PFBFILES) $(AFMFILES) $(FAMILY)-*_.sfd
+
+install:
+	mkdir -p $(DESTDIR)$(fontdir)
+	$(INSTALL) -p --mode=644 $(TTFFILES) $(DESTDIR)$(fontdir)/
+	mkdir -p $(DESTDIR)$(docdir)
+	$(INSTALL) -p --mode=644 $(DOCUMENTS) $(DESTDIR)$(docdir)/
