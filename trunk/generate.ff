@@ -73,8 +73,8 @@ add_accented.ff()
 same_kern.ff(cursive)
 make_kern.ff(cursive)
 liga_sub.ff()
-dub_glyph.pe("quoteleft","quotereversed")
-dub_glyph.pe("quotedblleft","uni201F")
+#dub_glyph.pe("quoteleft","quotereversed")
+#dub_glyph.pe("quotedblleft","uni201F")
 ## import BDF files
 /*
 i = 10
@@ -89,8 +89,8 @@ while (i < 25)
  i++
 endloop
 */
-Generate(fontname+".otf","ttf",0x200A00,-1)
 #Save(fontname+"_.sfd")
+Generate(fontname+".otf","ttf",0x200A00,-1)
 #Reencode("AdobeStandardEncoding")
 Generate(fontname+".pfb","",0xa00021)
 SetFontOrder(2)
