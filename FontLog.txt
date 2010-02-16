@@ -66,6 +66,13 @@ according to the conditions of the Adobe/TUG license agreement.
 ChangeLog
 ---------
 
+2010-02-15 Andrey V. Panov
+	Tuned some kerning pairs in Cyrillic.
+	Added U+211F, U+2123.
+	Added LaTeX support.
+	Manually instructed "g" in Regular.
+	Version 0.2.1 is released.
+
 2009-08-09 Andrey V. Panov
 	Version 0.2 is released.
 

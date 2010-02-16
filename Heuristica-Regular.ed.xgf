@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
-
-  <!--
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2" xmlns:xi="http://www.w3.org/2001/XInclude">
+ 
+ <!--
      
-     Andrey V. Panov (C) 2009
+     Andrey V. Panov (C) 2009, 2010
      
      All rights reserved.
      
@@ -23,46 +23,46 @@
      PERFORMANCE OF THIS SOFTWARE.
      
      -->
-  <!--
- <alias name="small-cyrn-intersect-height" target="cv-3"/>
- <alias name="cap-h-intersect-height" target="cv-4"/>
-     -->
-  <outfile fmflags="2560" pyflags="old-kern opentype">Heuristica-Regular.ttf</outfile>
-  <alias name="small-vert-stem" target="cv-15"/>
-  <alias name="small-o-curve-stem" target="cv-17"/>
+ 
+ <outfile fmflags="2560" pyflags="old-kern opentype">Heuristica-Regular.ttf</outfile>
+ 
+ <constant name="left-bearing" value="last + 1"/>
+ <constant name="right-bearing" value="last + 2"/>
+<!--     <alias name="small-vert-stem" target="cv-15"/>
+ <alias name="small-o-curve-stem" target="cv-17"/>
+ -->
+ 
+ <control-value name="zero" value="0"/>
+ <control-value name="small-o-baseline" value="-12"/>
+ <control-value name="small-x-height" value="490"/>
+ <control-value name="small-o-height" value="502"/>
+ <control-value name="small-desc" value="-230"/>
+ <control-value name="small-curve-desc" value="-242"/>
+ <control-value name="small-vert-stem" value="94"/>
+ <control-value name="small-o-curve-stem" value="104"/>
+ <control-value name="small-curve-hstem" value="35"/>
+ 
+ <pre-program>
+  
+  <round value="small-o-baseline"/>
+  <round value="small-o-height"/>
+  <round value="small-curve-desc"/>
 
-  <pre-program>
-    <!--
+  <!--  <set-equal target="small-o-height" source="round(control-value(index(small-x-height))) - control-value(index(small-o-baseline))"/>
+  <set-equal target="small-curve-desc" source="round(control-value(index(small-desc))) + control-value(index(small-o-baseline))"/>-->
+  
   <control-value-delta>
-   <delta-set cv="small-cyrn-intersect-height" size="1" distance="-8"/>
-   <delta-set cv="small-cyrn-intersect-height" size="5" distance="-8"/>
-   <delta-set cv="small-cyrn-intersect-height" size="9" distance="-8"/>
-   <delta-set cv="small-cyrn-intersect-height" size="13" distance="-8"/>
-   <delta-set cv="small-cyrn-intersect-height" size="17" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="1" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="4" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="7" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="9" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="10" distance="-8"/>
-   <delta-set cv="cap-h-intersect-height" size="12" distance="-8"/>
+   <delta-set cv="small-curve-desc" size="1" distance="-8"/>
   </control-value-delta>
-     -->
-    <if test="is-glyph-grayscale">
-      <if test="pixels-per-em &lt; 15 and pixels-per-em &gt; 11">
-        <!--
-   <round value="small-vert-stem" color="black"/>
-   <round value="small-o-curve-stem" color="black"/>
-     -->
-        <round value="cv-15" color="black"/>
-        <round value="cv-17" color="black"/>
-      </if>
-      <!--
-   <control-value-delta>
-     <delta-set cv="small-vert-stem" size="4" distance="-1"/>
-     <delta-set cv="small-vert-stem" size="5" distance="-2"/>
-   </control-value-delta>
-     -->
-    </if>
-  </pre-program>
-
+  
+  <if test="is-glyph-grayscale">
+   <if test="pixels-per-em &lt; 15 and pixels-per-em &gt; 11">
+    <round value="small-vert-stem" color="black"/>
+    <round value="small-o-curve-stem" color="black"/>
+   </if>
+  </if>
+  
+ </pre-program>
+ <xi:include href="upr_g.xgf" xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)xpointer(//x:glyph)"/>
+ 
 </xgridfit>

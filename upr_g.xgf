@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+ 
+ <glyph ps-name="g" init-graphics="yes">
+  
+  <!--
+      
+      Andrey V. Panov (C) 2008, 2010
+      
+      All rights reserved.
+      
+      This Font Software is licensed under the SIL Open Font License, Version 1.1.
+      This license is copied together with this font package in OFL.txt,
+      and is also available with a FAQ at:
+      http://scripts.sil.org/OFL
+      
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+      OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+      THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS
+      INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT
+      OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+      OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+      OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+      PERFORMANCE OF THIS SOFTWARE.
+      
+      -->
+  
+  <constant name="lower-oval-outer-left" value="0"/>
+  <constant name="lower-joint-left" value="lower-oval-outer-left + 6"/>
+  <constant name="middle-left-curve-left" value="lower-joint-left + 3"/>
+  <constant name="upper-joint-left" value="middle-left-curve-left + 3"/>
+  <constant name="upper-oval-outer-left" value="upper-joint-left + 3"/>
+  <constant name="upper-oval-outer-top" value="upper-oval-outer-left + 3"/>
+  <constant name="arm-left-top" value="upper-oval-outer-top + 2"/>
+  <constant name="arm-right-top" value="arm-left-top + 1"/>
+  <constant name="arm-right-bottom" value="arm-right-top + 2"/>
+  <constant name="arm-left-bottom" value="arm-right-bottom + 1"/>
+  <constant name="upper-oval-outer-right" value="arm-left-bottom + 2"/>
+  <constant name="upper-oval-outer-bottom" value="upper-oval-outer-right + 4"/>
+  <constant name="upper-joint-right" value="upper-oval-outer-bottom + 2"/>
+  <constant name="middle-left-curve-right" value="upper-joint-right + 3"/>
+  <constant name="lower-oval-outer-top" value="middle-left-curve-right + 2"/>
+  <constant name="lower-oval-outer-right" value="lower-oval-outer-top + 4"/>
+  <constant name="lower-oval-outer-bottom" value="lower-oval-outer-right + 4"/>
+  <constant name="lower-oval-inner-left" value="48"/>
+  <constant name="lower-oval-inner-bottom" value="lower-oval-inner-left + 3"/>
+  <constant name="lower-oval-inner-right" value="lower-oval-inner-bottom + 3"/>
+  <constant name="lower-oval-inner-top" value="lower-oval-inner-right + 2"/>
+  <constant name="lower-joint-right" value="lower-oval-inner-top + 1"/>
+  <constant name="upper-oval-inner-left" value="60"/>
+  <constant name="upper-oval-inner-bottom" value="upper-oval-inner-left + 3"/>
+  <constant name="upper-oval-inner-right" value="upper-oval-inner-bottom + 3"/>
+  <constant name="upper-oval-inner-top" value="upper-oval-inner-right + 3"/>
+  <constant name="last" value="upper-oval-inner-top + 2"/>
+  <variable name="height-low"/>
+  <variable name="height-up"/>
+  
+  <if test="is-glyph-grayscale and pixels-per-em &gt; 14">
+   <set-round-state round="no"/>
+  </if>
+  
+  <set-vectors axis="x"/>
+  <move round="to-grid" color="white">
+   <reference>
+    <point num="left-bearing"/>
+   </reference>
+   <point num="lower-oval-outer-left"/>
+   <move distance="small-vert-stem" color="black">
+    <point num="lower-oval-inner-left"/>
+   </move>
+   <move round="to-grid" min-distance="no">
+    <point num="upper-oval-outer-left"/>
+    <move distance="small-o-curve-stem" color="black">
+     <point num="upper-oval-inner-left"/>
+    </move>
+    <move round="no" min-distance="no">
+     <point num="upper-joint-left"/>
+     <move color="black">
+      <point num="upper-joint-right"/>
+     </move>
+    </move>
+   </move>
+   <move round="to-grid" min-distance="no">
+    <point num="middle-left-curve-left"/>
+    <move color="black">
+     <point num="middle-left-curve-right"/>
+    </move>
+   </move>
+   <move min-distance="no">
+    <point num="lower-joint-left"/>
+    <move color="black">
+     <point num="lower-joint-right"/>
+    </move>
+   </move>
+  </move>
+  <move round="to-grid" min-distance="no" color="white">
+   <reference>
+    <point num="right-bearing"/>
+   </reference>
+   <point num="lower-oval-outer-right"/>
+   <interpolate>
+    <point num="arm-right-top"/>
+    <point num="arm-right-bottom"/>
+   </interpolate>
+   <move color="black">
+    <point num="lower-oval-inner-right"/>
+   </move>
+   <move round="to-grid" min-distance="no">
+    <point num="upper-oval-outer-right"/>
+    <move distance="small-vert-stem" color="black">
+     <point num="upper-oval-inner-right"/>
+     <interpolate>
+      <point num="arm-left-top"/>
+      <point num="arm-left-bottom"/>
+     </interpolate>
+    </move>
+   </move>
+  </move>
+  
+  <set-vectors axis="y"/>
+  <move round="to-grid" distance="small-curve-desc">
+   <point num="lower-oval-outer-bottom"/>
+   <move distance="small-curve-hstem" color="black">
+    <point num="lower-oval-inner-bottom"/>
+   </move>
+  </move>
+  <move round="to-grid" distance="zero">
+   <point num="lower-oval-inner-top"/>
+   <move round="to-grid" color="black">
+    <point num="lower-oval-outer-top"/>
+   </move>
+   <move round="to-grid" color="white">
+    <point num="upper-oval-outer-bottom"/>
+    <move distance="small-curve-hstem" color="black">
+     <point num="upper-oval-inner-bottom"/>
+    </move>
+   </move>
+  </move>
+  <move round="to-grid" distance="small-o-height">
+   <point num="upper-oval-outer-top"/>
+   <move distance="small-curve-hstem" color="black">
+    <point num="upper-oval-inner-top"/>
+    <!--    <interpolate>
+     <point num="arm-left-top"/>
+     <point num="arm-left-bottom"/>
+    </interpolate>-->
+   </move>
+  </move>
+  <move min-distance="no">
+   <reference>
+    <point num="upper-oval-outer-top"/>
+   </reference>
+   <point num="arm-right-top"/>
+   <move color="black">
+    <point num="arm-right-bottom"/>
+   </move>
+  </move>
+  <interpolate>
+   <reference>
+    <point num="arm-right-bottom"/>
+    <point num="arm-right-top"/>
+   </reference>
+   <point num="arm-left-top"/>
+   <point num="arm-left-bottom"/>
+  </interpolate>
+  <set-equal target="height-low" source="lower-oval-outer-top -- upper-oval-outer-bottom"/>
+  <set-equal target="height-up" source="upper-oval-inner-bottom -- upper-oval-inner-top"/>
+  <if test="height-low &gt;= 2.0p">
+   <if test="height-low &gt; height-up">
+    <shift-absolute pixel-distance="-1.0p">
+     <point num="upper-oval-inner-bottom"/>
+     <point num="upper-oval-outer-bottom"/>
+    </shift-absolute>
+   </if>
+   <else>
+    <if test="height-low = 0.0p">
+     <shift-absolute pixel-distance="1.0p">
+      <point num="upper-oval-inner-bottom"/>
+      <point num="upper-oval-outer-bottom"/>
+     </shift-absolute>
+    </if>
+   </else>
+  </if>
+  <interpolate>
+   <reference>
+    <point num="upper-oval-inner-bottom"/>
+    <point num="upper-oval-outer-bottom"/>
+   </reference>
+   <point num="upper-joint-left"/>
+   <point num="upper-joint-right"/>
+  </interpolate>
+  
+  <interpolate-untouched-points/>
+ </glyph>
+</xgridfit>
