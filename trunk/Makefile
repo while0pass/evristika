@@ -60,19 +60,20 @@ $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
 
 #%.gen.ttf: %.otf
 
-%.gen.ttx: %.gen.ttf %.otf
-	-rm $*.gen.ttx
-	ttx $*.gen.ttf
+#%.gen.ttx: %.gen.ttf %.otf
+#	-rm $*.gen.ttx
+#	ttx $*.gen.ttf
 
-%.gen.xgf: %.gen.ttx
-	-rm $*.gen.xgf
-	ttx2xgf $*.gen.ttx
+#%.gen.xgf: %.gen.ttx
+#	-rm $*.gen.xgf
+#	ttx2xgf $*.gen.ttx
 
-%.xml: %.gen.xgf %.ed.xgf
-	xgfmerge -o $@ $^
+#%.xml: %.gen.xgf %.ed.xgf
+#	xgfmerge -o $@ $^
 
-%.py: %.xml
-	xgridfit -p 25 -G no -i $*.gen.ttf -o $*.ttf $<
+%.py: %.ed.xgf %.gen.ttf
+	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
+#	xgridfit -p 25 -G no -i $*_.sfd -o $*.ttf $<
 
 #$(FAMILY)-Regular.ttf: $(FAMILY)-Regular.pe # $(FAMILY)-Regular.gen.ttf
 #	fontforge -lang=ff -script $(FAMILY)-Regular.pe
