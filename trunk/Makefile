@@ -16,7 +16,8 @@ FFSCRIPTS=generate.ff make_dup_vertshift.pe new_glyph.ff add_anchor_ext.ff \
 	cop_kern.ff cop_kern_mult.ff copy_anchors_acc.ff liga_sub.ff \
 	COPYING.scripts
 #DIFFFILES=$(FAMILY)-Regular.gen.xgf.diff # $(FAMILY)-Italic.gen.xgf.diff $(FAMILY)-Bold.gen.xgf.diff $(FAMILY)-BoldItalic.gen.xgf.diff
-XGFFILES=$(FAMILY)-Regular.ed.xgf # $(FAMILY)-Italic.ed.xgf $(FAMILY)-Bold.ed.xgf $(FAMILY)-BoldItalic.ed.xgf
+XGFFILES= upr_functions.xgf upr_g.xgf \
+	$(FAMILY)-Regular.ed.xgf $(FAMILY)-Italic.ed.xgf $(FAMILY)-Bold.ed.xgf $(FAMILY)-BoldItalic.ed.xgf
 COMPRESS=xz -9
 TEXENC=t1,t2a,t2b,t2c
 
@@ -44,16 +45,22 @@ $(FAMILY)-BoldItalic.otf: $(FAMILY)-BoldItalic.sfd $(FFSCRIPTS)
 	fntsample -f $< -o $@
 
 # We don't want to change anything in autoinstructed following faces:
-$(FAMILY)-Italic.ttf: $(FAMILY)-Italic.gen.ttf $(FAMILY)-Italic.otf
-	cp -p $(FAMILY)-Italic.gen.ttf $(FAMILY)-Italic.ttf
-
-$(FAMILY)-Bold.ttf: $(FAMILY)-Bold.gen.ttf $(FAMILY)-Bold.otf
-	cp -p $(FAMILY)-Bold.gen.ttf $(FAMILY)-Bold.ttf
-
-$(FAMILY)-BoldItalic.ttf: $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.otf
-	cp -p $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.ttf
+#$(FAMILY)-Italic.ttf: $(FAMILY)-Italic.gen.ttf $(FAMILY)-Italic.otf
+#	cp -p $(FAMILY)-Italic.gen.ttf $(FAMILY)-Italic.ttf
+#
+#$(FAMILY)-Bold.ttf: $(FAMILY)-Bold.gen.ttf $(FAMILY)-Bold.otf
+#	cp -p $(FAMILY)-Bold.gen.ttf $(FAMILY)-Bold.ttf
+#
+#$(FAMILY)-BoldItalic.ttf: $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.otf
+#	cp -p $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.ttf
 
 $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
+
+$(FAMILY)-Bold.gen.ttf: $(FAMILY)-Bold.otf
+
+$(FAMILY)-Italic.gen.ttf: $(FAMILY)-Italic.otf
+
+$(FAMILY)-BoldItalic.gen.ttf: $(FAMILY)-BoldItalic.otf
 
 %.ttf: %.py %.gen.ttf %.otf
 	fontforge -lang=py -script $*.py
@@ -71,7 +78,10 @@ $(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
 #%.xml: %.gen.xgf %.ed.xgf
 #	xgfmerge -o $@ $^
 
-%.py: %.ed.xgf %.gen.ttf
+%_acc.xgf: %.gen.ttf %.otf
+	fontforge -lang=py -script inst_acc.py -i $*_.sfd  -o $*_acc.xgf
+
+%.py: %.ed.xgf %.gen.ttf %_acc.xgf
 	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
 #	xgridfit -p 25 -G no -i $*_.sfd -o $*.ttf $<
 
