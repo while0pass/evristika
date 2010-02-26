@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2" xmlns:xi="http://www.w3.org/2001/XInclude">
+ 
+ <!--
+     
+     Andrey V. Panov (C) 2009, 2010
+     
+     All rights reserved.
+     
+     This Font Software is licensed under the SIL Open Font License, Version 1.1.
+     This license is copied together with this font package in OFL.txt,
+     and is also available with a FAQ at:
+     http://scripts.sil.org/OFL
+     
+     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+     OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+     THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS
+     INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT
+     OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+     OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+     PERFORMANCE OF THIS SOFTWARE.
+     
+     -->
+ 
+ <outfile fmflags="2560" pyflags="old-kern opentype">Heuristica-Italic.ttf</outfile>
+ 
+ <constant name="left-bearing" value="last + 1"/>
+ <constant name="right-bearing" value="last + 2"/>
+ 
+ <variable name="width-left"/>
+ <variable name="width-right"/>
+ <variable name="temp"/>
+ 
+ <xi:include href="upr_functions.xgf" xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)xpointer(//x:macro)"/>
+ <xi:include href="Heuristica-Italic_acc.xgf" xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)xpointer(//x:glyph)"/>
+ 
+ <pre-program/>
+</xgridfit>

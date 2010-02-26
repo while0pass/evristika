@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!-- Functions and macros for upright font -->
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2">
+ 
+ <!--
+     
+     Andrey V. Panov (C) 2010
+     
+     All rights reserved.
+     
+     This Font Software is licensed under the SIL Open Font License, Version 1.1.
+     This license is copied together with this font package in OFL.txt,
+     and is also available with a FAQ at:
+     http://scripts.sil.org/OFL
+     
+     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+     OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+     MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+     THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS
+     INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT
+     OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+     OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+     PERFORMANCE OF THIS SOFTWARE.
+     
+     -->
+ 
+ <macro name="shift-accent">
+  <param name="point-base-left"/>
+  <param name="point-base-right"/>
+  <param name="point-acc-left"/>
+  <param name="point-acc-right"/>
+  
+  <if test="pixels-per-em &lt; 34">
+   <set-equal target="width-left" source="round(point-base-left -- point-acc-left)"/>
+   <set-equal target="width-right" source="round(point-base-right -- point-acc-right)"/>
+   <if test="(width-right &gt; 0) and (width-left &gt; 0)">
+    <shift-absolute pixel-distance="-1.0p">
+     <point num="point-acc-left"/>
+    </shift-absolute>
+   </if>
+   <else>
+    <if test="(width-right &lt; 0) and (width-left &lt; 0)">
+     <shift-absolute pixel-distance="1.0p">
+      <point num="point-acc-left"/>
+     </shift-absolute>
+    </if>
+   </else>
+  </if>
+ </macro>
+ 
+</xgridfit>
