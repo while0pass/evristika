@@ -19,6 +19,7 @@ import sys, re, getopt
 import unicodedata
 
 strip_suff = re.compile("\..*$", re.I)
+sym_accents = ("cyrbreve", "cyrBreve", "dotaccent", "macron", "circumflex", "caron", "breve", "dieresis", "dotbelowcomb")
 
 def extrema_points(glyf):
   global font, subref, point_bot, point_left, point_top, point_right, point_num
@@ -75,10 +76,11 @@ def dig_subrefs(refs, glyfname):
 def usage():
   print " -i file, --input=file     input truetype font file"
   print " -o file, --output=file    output xgridfit file"
-  print " -v , --only-vertical      add only instructions for vertical placement"
+  print " -v , --only-vertical      add only instructions for vertical placement (off)"
+  print " -c , --center             add only instructions for centering some accents (off)"
 
 try:
-  opts, args = getopt.getopt(sys.argv[1:], "hvi:o:", ["help", "only-vertical", "input=", "output="])
+  opts, args = getopt.getopt(sys.argv[1:], "hvci:o:", ["help", "only-vertical", "--center", "input=", "output="])
 except getopt.GetoptError, err:
   print "unrecognized option"
   usage()
@@ -86,6 +88,7 @@ except getopt.GetoptError, err:
 outfile = None
 font_name = None
 only_vertical = 0
+inst_sym = 0
 for (o, a) in opts:
   if o in ("-i", "--input"):
     font_name = a
@@ -96,11 +99,13 @@ for (o, a) in opts:
     outfile = a
   elif o in ("-v", "--only-vertical"):
     only_vertical = 1
+  elif o in ("-c", "--center") and not only_vertical:
+    inst_sym = 1
 #font_name = sys.argv[1]
 font = fontforge.open(font_name)
 f = open(outfile, 'w')
 font.selection.all()
-#font.selection.select("aacute,edieresis,uni1E69,afii10110,uni04F3")
+#font.selection.select("aacute,edieresis,uni1E69,afii10110,uni04F3,Ncaron")
 f.write("<?xml version=\"1.0\"?>\n<xgridfit xmlns=\"http://xgridfit.sourceforge.net/Xgridfit2\">\n<!-- GENERATED FILE, DO NOT EDIT -->\n")
 for glyf in font.selection:
   if glyf.isWorthOutputting and not(len(glyf.ttinstrs)):
@@ -169,7 +174,21 @@ for glyf in font.selection:
 	  for i in t[4]:
 	    f.write("    <contour num=\"%d\"/>\n" % i)
 	  f.write("   </shift>\n  </if> <!-- -->\n")
-	if t[1][0] >= basedata[1][0] and t[3][0] <= basedata[3][0] and not(only_vertical): # shift accent along x
+	if inst_sym and strip_suff.split(t[5])[0] in sym_accents: # center accent along x
+	  if not(glyph_head_printed):
+	    glyph_head_printed = 1
+	    f.write(glyph_head % glyf.glyphname)
+	  f.write("  <set-vectors axis=\"x\"/>\n")
+	  f.write("  <call-macro name=\"center-accent\">\n")
+	  f.write("   <with-param name=\"point-base-left\" value=\"%d\"/>\n" % basedata[1][2])
+	  f.write("   <with-param name=\"point-base-right\" value=\"%d\"/>\n" % basedata[3][2])
+	  f.write("   <with-param name=\"point-acc-left\" value=\"%d\"/>\n" % t[1][2])
+	  f.write("   <with-param name=\"point-acc-right\" value=\"%d\"/>\n" % t[3][2])
+	  f.write("  </call-macro>\n  <shift>\n   <reference>\n    <point num=\"%d\"/>\n   </reference>\n" % t[1][2])
+	  for i in t[4]:
+	    f.write("   <contour num=\"%d\"/> <!-- -->\n" % i)
+	  f.write("  </shift>\n")
+	elif t[1][0] >= basedata[1][0] and t[3][0] <= basedata[3][0] and not(only_vertical): # shift accent along x
 	  if not(glyph_head_printed):
 	    glyph_head_printed = 1
 	    f.write(glyph_head % glyf.glyphname)

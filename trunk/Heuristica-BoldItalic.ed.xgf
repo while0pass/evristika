@@ -28,6 +28,7 @@
  
  <constant name="left-bearing" value="last + 1"/>
  <constant name="right-bearing" value="last + 2"/>
+ <constant name="max-x-shift" value="34"/>
  
  <variable name="width-left"/>
  <variable name="width-right"/>
