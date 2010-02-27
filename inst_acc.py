@@ -77,10 +77,10 @@ def usage():
   print " -i file, --input=file     input truetype font file"
   print " -o file, --output=file    output xgridfit file"
   print " -v , --only-vertical      add only instructions for vertical placement (off)"
-  print " -c , --center             add only instructions for centering some accents (off)"
+  print " -c , --center             add instructions for centering some accents (off)"
 
 try:
-  opts, args = getopt.getopt(sys.argv[1:], "hvci:o:", ["help", "only-vertical", "--center", "input=", "output="])
+  opts, args = getopt.getopt(sys.argv[1:], "hvci:o:", ["help", "only-vertical", "center", "input=", "output="])
 except getopt.GetoptError, err:
   print "unrecognized option"
   usage()
