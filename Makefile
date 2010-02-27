@@ -62,6 +62,9 @@ $(FAMILY)-Italic.gen.ttf: $(FAMILY)-Italic.otf
 
 $(FAMILY)-BoldItalic.gen.ttf: $(FAMILY)-BoldItalic.otf
 
+$(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular.gen.ttf $(FAMILY)-Regular.otf
+	fontforge -lang=py -script inst_acc.py -c -i $(FAMILY)-Regular_.sfd  -o $(FAMILY)-Regular_acc.xgf
+
 %.ttf: %.py %.gen.ttf %.otf
 	fontforge -lang=py -script $*.py
 
@@ -81,7 +84,7 @@ $(FAMILY)-BoldItalic.gen.ttf: $(FAMILY)-BoldItalic.otf
 %_acc.xgf: %.gen.ttf %.otf
 	fontforge -lang=py -script inst_acc.py -i $*_.sfd  -o $*_acc.xgf
 
-%.py: %.ed.xgf %.gen.ttf %_acc.xgf
+%.py: %.ed.xgf %.gen.ttf %_acc.xgf upr_functions.xgf
 	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
 #	xgridfit -p 25 -G no -i $*_.sfd -o $*.ttf $<
 
