@@ -17,9 +17,12 @@ FFSCRIPTS=generate.ff make_dup_vertshift.pe new_glyph.ff add_anchor_ext.ff \
 	COPYING.scripts
 #DIFFFILES=$(FAMILY)-Regular.gen.xgf.diff # $(FAMILY)-Italic.gen.xgf.diff $(FAMILY)-Bold.gen.xgf.diff $(FAMILY)-BoldItalic.gen.xgf.diff
 XGFFILES= upr_functions.xgf upr_g.xgf \
+	inst_acc.py \
 	$(FAMILY)-Regular.ed.xgf $(FAMILY)-Italic.ed.xgf $(FAMILY)-Bold.ed.xgf $(FAMILY)-BoldItalic.ed.xgf
 COMPRESS=xz -9
 TEXENC=t1,t2a,t2b,t2c
+#PYTHON=python -W all
+PYTHON=fontforge -lang=py -script 
 
 INSTALL=install
 DESTDIR=
@@ -54,23 +57,26 @@ $(FAMILY)-BoldItalic.otf: $(FAMILY)-BoldItalic.sfd $(FFSCRIPTS)
 #$(FAMILY)-BoldItalic.ttf: $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.otf
 #	cp -p $(FAMILY)-BoldItalic.gen.ttf $(FAMILY)-BoldItalic.ttf
 
-$(FAMILY)-Regular.gen.ttf: $(FAMILY)-Regular.otf
+$(FAMILY)-Regular_.sfd: $(FAMILY)-Regular.otf
 
-$(FAMILY)-Bold.gen.ttf: $(FAMILY)-Bold.otf
+$(FAMILY)-Bold_.sfd: $(FAMILY)-Bold.otf
 
-$(FAMILY)-Italic.gen.ttf: $(FAMILY)-Italic.otf
+$(FAMILY)-Italic_.sfd: $(FAMILY)-Italic.otf
 
-$(FAMILY)-BoldItalic.gen.ttf: $(FAMILY)-BoldItalic.otf
+$(FAMILY)-BoldItalic_.sfd: $(FAMILY)-BoldItalic.otf
 
-$(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular.gen.ttf $(FAMILY)-Regular.otf
-	fontforge -lang=py -script inst_acc.py -c -i $(FAMILY)-Regular_.sfd  -o $(FAMILY)-Regular_acc.xgf
+$(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular_.sfd $(FAMILY)-Regular.otf
+	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Regular_.sfd  -o $(FAMILY)-Regular_acc.xgf
 
-%.ttf: %.py %.gen.ttf %.otf
+$(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf
+	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Bold_.sfd  -o $(FAMILY)-Bold_acc.xgf
+
+%.ttf: %.py %_.sfd %.otf
 	fontforge -lang=py -script $*.py
 
-#%.gen.ttf: %.otf
+#%_.sfd: %.otf
 
-#%.gen.ttx: %.gen.ttf %.otf
+#%.gen.ttx: %_.sfd %.otf
 #	-rm $*.gen.ttx
 #	ttx $*.gen.ttf
 
@@ -81,15 +87,13 @@ $(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular.gen.ttf $(FAMILY)-Regular.otf
 #%.xml: %.gen.xgf %.ed.xgf
 #	xgfmerge -o $@ $^
 
-%_acc.xgf: %.gen.ttf %.otf
-	fontforge -lang=py -script inst_acc.py -i $*_.sfd  -o $*_acc.xgf
+%_acc.xgf: %_.sfd %.otf
+	$(PYTHON) inst_acc.py -i $*_.sfd  -o $*_acc.xgf
 
-%.py: %.ed.xgf %.gen.ttf %_acc.xgf upr_functions.xgf
+%.py: %.ed.xgf %_.sfd %_acc.xgf upr_functions.xgf
 	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
 #	xgridfit -p 25 -G no -i $*_.sfd -o $*.ttf $<
 
-#$(FAMILY)-Regular.ttf: $(FAMILY)-Regular.pe # $(FAMILY)-Regular.gen.ttf
-#	fontforge -lang=ff -script $(FAMILY)-Regular.pe
 
 .SECONDARY : *.py *.xml *.gen.xgf *.gen.ttx
 

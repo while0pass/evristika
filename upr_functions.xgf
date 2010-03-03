@@ -67,4 +67,21 @@
   </if>
  </macro>
  
+ <macro name="center-accent-extremum">
+  <param name="point-base-anchor"/>
+  <param name="point-acc-left"/>
+  <param name="point-acc-right"/>
+  
+  <if test="pixels-per-em &lt; max-x-shift">
+   <with-round-state round="down-to-grid">
+    <set-equal target="temp" source="round(coord(point-base-anchor) - ((coord(point-acc-left) + coord(point-acc-right)) / 2.0))"/>
+    <if test="temp != 0.0">
+     <shift-absolute pixel-distance="temp">
+      <point num="point-acc-left"/>
+     </shift-absolute>
+    </if>
+   </with-round-state>
+  </if>
+ </macro>
+ 
 </xgridfit>
