@@ -66,6 +66,10 @@ according to the conditions of the Adobe/TUG license agreement.
 ChangeLog
 ---------
 
+2010-06-09 Andrey V. Panov
+	Added several characters mostly for support of Polish and Romanian.
+	Version 0.2.2 is released.
+
 2010-02-15 Andrey V. Panov
 	Tuned some kerning pairs in Cyrillic.
 	Added U+211F, U+2123.
