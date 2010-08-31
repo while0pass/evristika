@@ -13,7 +13,7 @@ FFSCRIPTS=generate.ff make_dup_vertshift.pe new_glyph.ff add_anchor_ext.ff \
 	make_dup_rot.ff add_accented.ff dub_glyph_ch.ff same_cyrext.ff \
 	make_cap_accent.ff make_superscript.ff dub_aligned.ff same_kern.ff \
 	make_kern.ff cop_kern_left.ff cop_kern_right.ff cop_kern_acc.ff \
-	cop_kern.ff cop_kern_mult.ff copy_anchors_acc.ff liga_sub.ff \
+	cop_kern.ff cop_kern_mult.ff copy_anchors_acc.ff sc_sub.ff liga_sub.ff \
 	COPYING.scripts
 #DIFFFILES=$(FAMILY)-Regular.gen.xgf.diff # $(FAMILY)-Italic.gen.xgf.diff $(FAMILY)-Bold.gen.xgf.diff $(FAMILY)-BoldItalic.gen.xgf.diff
 XGFFILES= upr_functions.xgf upr_g.xgf \
