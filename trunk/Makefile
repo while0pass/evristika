@@ -1,23 +1,23 @@
 VERSION:=$(shell date +"%Y%m%d")
-PKGNAME=heuristica
 FAMILY=Heuristica
+PKGNAME=heuristica
 SFDFILES=$(FAMILY)-Regular.sfd $(FAMILY)-Italic.sfd $(FAMILY)-Bold.sfd $(FAMILY)-BoldItalic.sfd
 DOCUMENTS=OFL.txt OFL-FAQ.txt FontLog.txt
 OTFFILES=$(FAMILY)-Regular.otf $(FAMILY)-Italic.otf $(FAMILY)-Bold.otf $(FAMILY)-BoldItalic.otf
 TTFFILES=$(FAMILY)-Regular.ttf $(FAMILY)-Italic.ttf $(FAMILY)-Bold.ttf $(FAMILY)-BoldItalic.ttf
 PFBFILES=$(FAMILY)-Regular.pfb $(FAMILY)-Italic.pfb $(FAMILY)-Bold.pfb $(FAMILY)-BoldItalic.pfb
 AFMFILES=$(FAMILY)-Regular.afm $(FAMILY)-Italic.afm $(FAMILY)-Bold.afm $(FAMILY)-BoldItalic.afm
-FFSCRIPTS=generate.ff make_dup_vertshift.pe new_glyph.ff add_anchor_ext.ff \
+FFSCRIPTS=generate.ff 
+EXTRAFFSCRIPTS=make_dup_vertshift.ff new_glyph.ff add_anchor_ext.ff \
 	add_anchor_y.ff add_anchor_med.ff anchors.ff combining.ff make_comb.ff \
-	dub_glyph.pe spaces_dashes.ff case_sub.ff add_ipa.ff hflip_glyph.ff \
+	dub_glyph.ff spaces_dashes.ff case_sub.ff add_ipa.ff hflip_glyph.ff \
 	make_dup_rot.ff add_accented.ff dub_glyph_ch.ff same_cyrext.ff \
 	make_cap_accent.ff make_superscript.ff dub_aligned.ff same_kern.ff \
 	make_kern.ff cop_kern_left.ff cop_kern_right.ff cop_kern_acc.ff \
 	cop_kern.ff cop_kern_mult.ff copy_anchors_acc.ff sc_sub.ff liga_sub.ff \
-	make_kern_sc.ff same_kern_sc.ff COPYING.scripts
+	make_kern_sc.ff same_kern_sc.ff
 #DIFFFILES=$(FAMILY)-Regular.gen.xgf.diff # $(FAMILY)-Italic.gen.xgf.diff $(FAMILY)-Bold.gen.xgf.diff $(FAMILY)-BoldItalic.gen.xgf.diff
 XGFFILES= upr_functions.xgf upr_g.xgf \
-	inst_acc.py \
 	$(FAMILY)-Regular.ed.xgf $(FAMILY)-Italic.ed.xgf $(FAMILY)-Bold.ed.xgf $(FAMILY)-BoldItalic.ed.xgf
 COMPRESS=xz -9
 TEXENC=t1,t2a,t2b,t2c
@@ -32,16 +32,16 @@ docdir=$(prefix)/doc/$(PKGNAME)
 
 all: $(OTFFILES) ttf
 
-$(FAMILY)-Regular.otf: $(FAMILY)-Regular.sfd $(FFSCRIPTS)
+$(FAMILY)-Regular.otf: $(FAMILY)-Regular.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
 	fontforge -lang=ff -script generate.ff $(FAMILY)-Regular UTRG__
 
-$(FAMILY)-Italic.otf: $(FAMILY)-Italic.sfd $(FFSCRIPTS)
+$(FAMILY)-Italic.otf: $(FAMILY)-Italic.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
 	fontforge -lang=ff -script generate.ff $(FAMILY)-Italic UTI___
 
-$(FAMILY)-Bold.otf: $(FAMILY)-Bold.sfd $(FFSCRIPTS)
+$(FAMILY)-Bold.otf: $(FAMILY)-Bold.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
 	fontforge -lang=ff -script generate.ff $(FAMILY)-Bold UTB___
 
-$(FAMILY)-BoldItalic.otf: $(FAMILY)-BoldItalic.sfd $(FFSCRIPTS)
+$(FAMILY)-BoldItalic.otf: $(FAMILY)-BoldItalic.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
 	fontforge -lang=ff -script generate.ff $(FAMILY)-BoldItalic UTBI__
 
 %.pdf: %.otf
@@ -65,10 +65,10 @@ $(FAMILY)-Italic_.sfd: $(FAMILY)-Italic.otf
 
 $(FAMILY)-BoldItalic_.sfd: $(FAMILY)-BoldItalic.otf
 
-$(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular_.sfd $(FAMILY)-Regular.otf
+$(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular_.sfd $(FAMILY)-Regular.otf inst_acc.py
 	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Regular_.sfd  -o $(FAMILY)-Regular_acc.xgf
 
-$(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf
+$(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf inst_acc.py
 	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Bold_.sfd  -o $(FAMILY)-Bold_acc.xgf
 
 %.ttf: %.py %_.sfd %.otf
@@ -87,13 +87,12 @@ $(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf
 #%.xml: %.gen.xgf %.ed.xgf
 #	xgfmerge -o $@ $^
 
-%_acc.xgf: %_.sfd %.otf
+%_acc.xgf: %_.sfd %.otf inst_acc.py
 	$(PYTHON) inst_acc.py -i $*_.sfd  -o $*_acc.xgf
 
 %.py: %.ed.xgf %_.sfd %_acc.xgf upr_functions.xgf
 	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
 #	xgridfit -p 25 -G no -i $*_.sfd -o $*.ttf $<
-
 
 .SECONDARY : *.py *.xml *.gen.xgf *.gen.ttx
 

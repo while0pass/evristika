@@ -82,8 +82,8 @@ if (fontname == "Heuristica-Regular")
  make_kern_sc.ff()
 endif
 liga_sub.ff()
-#dub_glyph.pe("quoteleft","quotereversed")
-#dub_glyph.pe("quotedblleft","uni201F")
+#dub_glyph.ff("quoteleft","quotereversed")
+#dub_glyph.ff("quotedblleft","uni201F")
 ## import BDF files
 /*
 i = 10
