@@ -66,10 +66,10 @@ $(FAMILY)-Italic_.sfd: $(FAMILY)-Italic.otf
 $(FAMILY)-BoldItalic_.sfd: $(FAMILY)-BoldItalic.otf
 
 $(FAMILY)-Regular_acc.xgf: $(FAMILY)-Regular_.sfd $(FAMILY)-Regular.otf inst_acc.py
-	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Regular_.sfd  -o $(FAMILY)-Regular_acc.xgf
+	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Regular.gen.ttf  -o $(FAMILY)-Regular_acc.xgf
 
 $(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf inst_acc.py
-	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Bold_.sfd  -o $(FAMILY)-Bold_acc.xgf
+	$(PYTHON) inst_acc.py -c -j -i $(FAMILY)-Bold.gen.ttf  -o $(FAMILY)-Bold_acc.xgf
 
 %.ttf: %.py %_.sfd %.otf
 	fontforge -lang=py -script $*.py
@@ -88,7 +88,7 @@ $(FAMILY)-Bold_acc.xgf: $(FAMILY)-Bold_.sfd $(FAMILY)-Bold.otf inst_acc.py
 #	xgfmerge -o $@ $^
 
 %_acc.xgf: %_.sfd %.otf inst_acc.py
-	$(PYTHON) inst_acc.py -i $*_.sfd  -o $*_acc.xgf
+	$(PYTHON) inst_acc.py -i $*.gen.ttf  -o $*_acc.xgf
 
 %.py: %.ed.xgf %_.sfd %_acc.xgf upr_functions.xgf
 	xgridfit -m -p 25 -G no -i $*_.sfd -o $*.ttf -O $*.py $*.ed.xgf
