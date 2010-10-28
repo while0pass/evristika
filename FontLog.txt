@@ -63,8 +63,33 @@ Heuristica fonts contains glyphs from Vntopia font family,
 http://vntex.sf.net which was released by Han The Thanh on 2006
 according to the conditions of the Adobe/TUG license agreement.
 
+Build and install instructions
+==============================
+
+You need fontforge (http://fontforge.sourceforge.net/), xgridfit
+(http://xgridfit.sourceforge.net/) and font-helpers
+(http://code.google.com/p/font-helpers/ ) in order to build fonts from
+the sources. Also you should have GNU make and coreutils. At first you
+must unpack/copy files from font-helpers into the directory where *.sfd
+files are located. Then type
+
+make
+
+and truetype fonts will be produced. On systems with X.Org you may do
+
+make install
+
+as root to install fonts system-wide (/usr/share/fonts/TTF). Otherwise
+copy *.ttf files into ~/.fonts/ directory. Then run fc-cache if you have
+fontconfig.
+
 ChangeLog
 ---------
+
+2010-10-28 Andrey V. Panov
+	Added small capitals (basic Latin and Cyrillic) in Regular.
+	Added more phonetic characters to Regular.
+	Version 0.3 is released.
 
 2010-06-09 Andrey V. Panov
 	Added several characters mostly for support of Polish and Romanian.
