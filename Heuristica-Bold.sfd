@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1276082172
+ModificationTime: 1289478902
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
@@ -46,13 +46,12 @@ DEI: 91125
 LangName: 1049 "" "+BC0EMgRABDgEQQRCBDgEOgQw" 
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.+AAoA-Utopia is either a registered trademark or trademark of Adobe Systems+AAoA-Incorporated in the United States and/or other countries. Used under+AAoA-license.+AAoACgAA-Copyright (c) 2008, 2009 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" 
 Encoding: UnicodeBmp
-Compacted: 1
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 80 16 16
+WinInfo: 304 16 16
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 41 [ -242 -230 -168 -168 -190 -190 557 566 ]
@@ -69,7 +68,7 @@ Erode 149 {
 151  0 dtransform dup mul exch dup mul add
 le{pop pop 1.0 1.0}{pop pop 0.0 1.5}ifelse}
 EndPrivate
-BeginChars: 65537 535
+BeginChars: 65537 537
 
 StartChar: space
 Encoding: 32 32 0
@@ -15768,6 +15767,24 @@ LayerCount: 2
 Fore
 Refer: 132 184 N 1 0 0 1 -46 0 2
 Refer: 84 116 S 1 0 0 1 0 0 3
+EndChar
+
+StartChar: uni019F
+Encoding: 415 415 535
+Width: 768
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 330 1138 N 1 0 0 1 0 0 3
+EndChar
+
+StartChar: uni0275
+Encoding: 629 629 536
+Width: 585
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 329 1139 N 1 0 0 1 0 0 3
 EndChar
 EndChars
 EndSplineFont
