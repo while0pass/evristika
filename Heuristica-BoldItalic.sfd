@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1290913660
+ModificationTime: 1291517917
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 512 16 14
+WinInfo: 42864 16 14
 BeginPrivate: 9
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 31 [ -242 -230 -190 -190 557 566 ]
@@ -72,7 +72,7 @@ Grid
 285 0 m 25
  430 692 l 25
 EndSplineSet
-BeginChars: 65537 553
+BeginChars: 65537 555
 
 StartChar: space
 Encoding: 32 32 0
@@ -20844,6 +20844,63 @@ SplineSet
  245 45 265 41 316 38 c 1
  307 0 l 1
  34 0 l 1
+EndSplineSet
+EndChar
+
+StartChar: uniA789
+Encoding: 42889 42889 553
+Width: 260
+Flags: HW
+HStem: 60 149<101.648 216.739> 311 149<158.648 273.739>
+VStem: 80 158<81.475 187.048> 137 158<332.475 438.048>
+LayerCount: 2
+Back
+SplineSet
+82 135 m 0
+ 91 173 127 210 178 210 c 0
+ 229 210 249 173 240 135 c 0
+ 231 97 195 60 144 60 c 0
+ 93 60 73 97 82 135 c 0
+140 385 m 0
+ 149 423 185 460 236 460 c 0
+ 287 460 307 423 298 385 c 0
+ 289 347 253 310 202 310 c 0
+ 151 310 131 347 140 385 c 0
+EndSplineSet
+Fore
+SplineSet
+80 134 m 0xe0
+ 80 172 108 209 159 209 c 0
+ 211 209 238 172 238 134 c 0
+ 238 96 211 60 159 60 c 0
+ 108 60 80 96 80 134 c 0xe0
+137 385 m 0xd0
+ 137 423 165 460 216 460 c 0
+ 268 460 295 423 295 385 c 0
+ 295 347 268 311 216 311 c 0
+ 165 311 137 347 137 385 c 0xd0
+EndSplineSet
+EndChar
+
+StartChar: uniA78A
+Encoding: 42890 42890 554
+Width: 386
+Flags: W
+HStem: 127 80<107 344> 293 80<145 383>
+VStem: 88 313
+LayerCount: 2
+Fore
+SplineSet
+88 127 m 1
+ 107 207 l 1
+ 363 207 l 1
+ 344 127 l 1
+ 88 127 l 1
+127 293 m 1
+ 145 373 l 1
+ 401 373 l 1
+ 383 293 l 1
+ 127 293 l 1
 EndSplineSet
 EndChar
 EndChars

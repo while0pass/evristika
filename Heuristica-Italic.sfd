@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1290913739
+ModificationTime: 1291520058
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 528 16 14
+WinInfo: 63024 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -242 -190 -190 568 576 732 748 ]
@@ -74,7 +74,7 @@ Grid
 265 0 m 25
  418 684 l 25
 EndSplineSet
-BeginChars: 65536 552
+BeginChars: 65536 556
 
 StartChar: space
 Encoding: 32 32 0
@@ -946,10 +946,23 @@ EndChar
 StartChar: colon
 Encoding: 58 58 26
 Width: 265
-Flags: W
+Flags: HW
 HStem: -12 125<128 158.5> 365 125<207 237.5>
 VStem: 82 122<36 65.5> 161 122<413 442.5>
 LayerCount: 2
+Back
+SplineSet
+82 51 m 4
+ 91 88 122 116 160 116 c 4
+ 199 116 217 88 208 51 c 4
+ 199 15 169 -12 130 -12 c 4
+ 92 -12 74 15 82 51 c 4
+168 425 m 4
+ 177 462 208 490 246 490 c 4
+ 285 490 303 462 294 425 c 4
+ 285 389 256 362 217 362 c 4
+ 179 362 160 389 168 425 c 4
+EndSplineSet
 Fore
 Refer: 14 46 S 1 0 0 1 79 377 2
 Refer: 14 46 S 1 0 0 1 0 0 2
@@ -20597,6 +20610,140 @@ SplineSet
  205 36 225 34 285 29 c 1
  278 0 l 1
  36 0 l 1
+EndSplineSet
+EndChar
+
+StartChar: uniA789
+Encoding: 42889 42889 552
+Width: 250
+Flags: W
+HStem: 80 110<112.339 192.856> 330 110<166.339 246.856>
+VStem: 99 107<92.9146 176.817> 153 107<342.915 426.817>
+LayerCount: 2
+Back
+SplineSet
+96 136 m 0
+ 103 165 130 192 169 192 c 0
+ 208 192 223 165 216 136 c 0
+ 209 107 182 79 143 79 c 0
+ 104 79 89 107 96 136 c 0
+154 385 m 0
+ 161 414 188 441 227 441 c 0
+ 266 441 281 414 274 385 c 0
+ 267 356 240 328 201 328 c 0
+ 162 328 147 356 154 385 c 0
+EndSplineSet
+Fore
+SplineSet
+99 129 m 0xe0
+ 99 165 125 190 158 190 c 0
+ 188 190 206 166 206 141 c 0
+ 206 107 183 80 148 80 c 0
+ 116 80 99 100 99 129 c 0xe0
+153 379 m 0xd0
+ 153 415 179 440 212 440 c 0
+ 242 440 260 416 260 391 c 0
+ 260 357 237 330 202 330 c 0
+ 170 330 153 350 153 379 c 0xd0
+EndSplineSet
+EndChar
+
+StartChar: uniA78A
+Encoding: 42890 42890 553
+Width: 386
+Flags: W
+HStem: 158 58<117 341> 286 58<146 371>
+VStem: 103 281
+LayerCount: 2
+Fore
+SplineSet
+103 158 m 1
+ 117 216 l 1
+ 355 216 l 1
+ 341 158 l 1
+ 103 158 l 1
+133 286 m 1
+ 146 344 l 1
+ 384 344 l 1
+ 371 286 l 1
+ 133 286 l 1
+EndSplineSet
+EndChar
+
+StartChar: zero.taboldstyle
+Encoding: 63043 63043 554
+Width: 530
+Flags: HW
+HStem: -12 35<211.677 323.894> 483 35<312.106 424.323>
+VStem: 86 89<67.4479 282.726> 461 89<223.274 438.552>
+LayerCount: 2
+Back
+SplineSet
+88 253 m 0
+ 123 418 220 518 371 518 c 0
+ 522 518 577 418 542 253 c 0
+ 507 88 409 -12 258 -12 c 0
+ 107 -12 53 90 88 253 c 0
+190 253 m 0
+ 162 120 179 23 266 23 c 0
+ 353 23 412 120 440 253 c 0
+ 468 386 451 483 364 483 c 0
+ 277 483 218 386 190 253 c 0
+EndSplineSet
+Fore
+SplineSet
+270 -12 m 0
+ 135 -12 86 59 86 173 c 0
+ 86 377 214 518 366 518 c 0
+ 501 518 550 447 550 333 c 0
+ 550 129 422 -12 270 -12 c 0
+366 483 m 0
+ 261 483 175 303 175 141 c 0
+ 175 78 190 23 270 23 c 0
+ 375 23 461 203 461 365 c 0
+ 461 428 446 483 366 483 c 0
+EndSplineSet
+EndChar
+
+StartChar: one.taboldstyle
+Encoding: 63044 63044 555
+Width: 530
+VWidth: 0
+Flags: WO
+HStem: 0 29<116 211.125 335.926 418> 477 29<226 307.527 432.375 528>
+DStem2: 218.607 0 307.607 0 0.224951 0.97437<68.2507 471.087>
+LayerCount: 2
+Back
+SplineSet
+109 0 m 1
+ 116 29 l 1
+ 217 35 227 37 238 84 c 2
+ 316 422 l 2
+ 327 469 318 471 219 477 c 1
+ 226 506 l 1
+ 535 506 l 1
+ 528 477 l 1
+ 427 471 416 469 405 422 c 2
+ 327 84 l 2
+ 316 37 326 35 425 29 c 1
+ 418 0 l 1
+ 109 0 l 1
+EndSplineSet
+Fore
+SplineSet
+109 0 m 1
+ 116 29 l 1
+ 217 35 228 42 238 84 c 2
+ 316 422 l 2
+ 326 465 309 473 219 477 c 1
+ 226 506 l 1
+ 535 506 l 1
+ 528 477 l 1
+ 427 471 415 464 405 422 c 2
+ 327 84 l 2
+ 317 41 335 33 425 29 c 1
+ 418 0 l 1
+ 109 0 l 1
 EndSplineSet
 EndChar
 EndChars

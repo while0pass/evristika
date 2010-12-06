@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1291035719
+ModificationTime: 1291517456
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 63024 16 14
+WinInfo: 42864 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 41 [ -242 -230 -168 -168 -190 -190 557 566 ]
@@ -68,7 +68,7 @@ Erode 149 {
 151  0 dtransform dup mul exch dup mul add
 le{pop pop 1.0 1.0}{pop pop 0.0 1.5}ifelse}
 EndPrivate
-BeginChars: 65537 558
+BeginChars: 65537 560
 
 StartChar: space
 Encoding: 32 32 0
@@ -825,8 +825,8 @@ HStem: -12 186<77.6596 202.34> 304 186<77.6596 202.34>
 VStem: 47 186<18.6596 143.34 334.66 459.34>
 LayerCount: 2
 Fore
-Refer: 14 46 S 1 0 0 1 0 0 3
-Refer: 14 46 S 1 0 0 1 0 316 2
+Refer: 14 46 N 1 0 0 1 0 0 3
+Refer: 14 46 N 1 0 0 1 0 316 2
 Kerns2: 0 -20 "LGC kerning subtable" 
 EndChar
 
@@ -16696,6 +16696,63 @@ SplineSet
  367 230 369 252 369 277 c 0
  369 392 340 472 279 472 c 0
  220 472 189 410 189 319 c 0xf4
+EndSplineSet
+EndChar
+
+StartChar: uniA789
+Encoding: 42889 42889 558
+Width: 260
+Flags: HW
+HStem: 60 150<72.6476 187.352> 310 150<72.6476 187.352>
+VStem: 51 158<81.9516 188.048 331.952 438.048>
+LayerCount: 2
+Back
+SplineSet
+51 135 m 0
+ 51 173 79 210 130 210 c 0
+ 181 210 209 173 209 135 c 0
+ 209 97 181 60 130 60 c 0
+ 79 60 51 97 51 135 c 0
+51 385 m 0
+ 51 423 79 460 130 460 c 0
+ 181 460 209 423 209 385 c 0
+ 209 347 181 310 130 310 c 0
+ 79 310 51 347 51 385 c 0
+EndSplineSet
+Fore
+SplineSet
+51 135 m 0
+ 51 173 79 210 130 210 c 0
+ 181 210 209 173 209 135 c 0
+ 209 97 181 60 130 60 c 0
+ 79 60 51 97 51 135 c 0
+51 385 m 0
+ 51 423 79 460 130 460 c 0
+ 181 460 209 423 209 385 c 0
+ 209 347 181 310 130 310 c 0
+ 79 310 51 347 51 385 c 0
+EndSplineSet
+EndChar
+
+StartChar: uniA78A
+Encoding: 42890 42890 559
+Width: 386
+Flags: HW
+HStem: 127 80<65 321> 293 80<65 321>
+VStem: 65 256<127 207 293 373>
+LayerCount: 2
+Fore
+SplineSet
+65 127 m 1
+ 65 207 l 1
+ 321 207 l 1
+ 321 127 l 1
+ 65 127 l 1
+65 293 m 1
+ 65 373 l 1
+ 321 373 l 1
+ 321 293 l 1
+ 65 293 l 1
 EndSplineSet
 EndChar
 EndChars
