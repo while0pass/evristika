@@ -4,7 +4,7 @@ FullName: Heuristica Regular
 FamilyName: Heuristica
 Weight: Regular
 Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008, 2009, 2010 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
-Version: 0.3
+Version: 0.4
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1163929378
-ModificationTime: 1291516218
+ModificationTime: 1291638989
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 42864 16 14
+WinInfo: 256 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -230 -190 -190 568 576 732 748 ]
@@ -73,7 +73,7 @@ Grid
  2000 -778 l 0
 EndSplineSet
 TeXData: 1 0 0 235929 117964 78643 513802 1048576 78643 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-BeginChars: 65538 720
+BeginChars: 65538 721
 
 StartChar: space
 Encoding: 32 32 0
@@ -28584,6 +28584,43 @@ SplineSet
  312 344 l 1
  312 286 l 1
  74 286 l 1
+EndSplineSet
+EndChar
+
+StartChar: Eng
+Encoding: 330 330 720
+Width: 761
+Flags: W
+HStem: -242 35<438.636 527.495> 0 29<35 114.046 235.181 316> 645 62<360.182 523.509> 663 29<35 114.046>
+VStem: 125 99<37.6573 570.364 600 654.343> 577 99<-107.914 592.85>
+LayerCount: 2
+Fore
+SplineSet
+35 0 m 1xec
+ 35 29 l 1
+ 123 35 125 37 125 93 c 2
+ 125 599 l 2
+ 125 655 123 657 35 663 c 1
+ 35 692 l 1
+ 224 692 l 1xdc
+ 224 600 l 1
+ 275 649 368 707 470 707 c 0
+ 602 707 676 647 676 473 c 2
+ 676 40 l 2
+ 676 -162 590 -242 484 -242 c 0
+ 441 -242 404 -236 382 -220 c 0
+ 348 -196 328 -157 328 -137 c 0
+ 328 -104 364 -91 386 -91 c 0
+ 451 -91 398 -207 474 -207 c 0
+ 563 -207 577 -112 577 10 c 2
+ 577 503 l 2
+ 577 599 533 645 431 645 c 0
+ 384 645 351 634 320 620 c 0
+ 295 609 224 577 224 521 c 2
+ 224 93 l 2
+ 224 37 226 35 316 29 c 1
+ 316 0 l 1
+ 35 0 l 1xec
 EndSplineSet
 EndChar
 EndChars
