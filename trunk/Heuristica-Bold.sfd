@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1291723273
+ModificationTime: 1291897617
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 448 16 14
+WinInfo: 256 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 41 [ -242 -230 -168 -168 -190 -190 557 566 ]
@@ -68,7 +68,7 @@ Erode 149 {
 151  0 dtransform dup mul exch dup mul add
 le{pop pop 1.0 1.0}{pop pop 0.0 1.5}ifelse}
 EndPrivate
-BeginChars: 65537 563
+BeginChars: 65537 564
 
 StartChar: space
 Encoding: 32 32 0
@@ -16904,6 +16904,48 @@ SplineSet
  482 127 l 1
  436 17 341 -12 249 -12 c 0
  120 -12 34 38 34 125 c 0xf4
+EndSplineSet
+EndChar
+
+StartChar: uni0186
+Encoding: 390 390 563
+Width: 689
+Flags: W
+HStem: -15 46<184.533 356.896> 661 46<184.085 350.756>
+VStem: 46 38<464 520.477> 469 177<206.743 497.229>
+LayerCount: 2
+Back
+SplineSet
+34 464 m 1
+ 46 659 l 1
+ 106 695 210 707 280 707 c 0
+ 537 707 646 567 646 353 c 0
+ 646 253 621 158 560 90 c 0
+ 501 24 406 -15 265 -15 c 0
+ 215 -15 110 -7 50 29 c 1
+ 50 208 l 1
+ 88 208 l 1
+ 111 136 146 31 274 31 c 0
+ 455 31 469 264 469 337 c 0
+ 469 450 444 661 266 661 c 0
+ 153 661 110 574 72 464 c 1
+ 34 464 l 1
+EndSplineSet
+Fore
+SplineSet
+39 208 m 1
+ 77 208 l 1
+ 103 129 148 31 274 31 c 0
+ 455 31 469 264 469 337 c 0
+ 469 450 440 661 273 661 c 0
+ 149 661 117 580 84 464 c 1
+ 46 464 l 1
+ 46 659 l 1
+ 114 693 206 707 280 707 c 0
+ 537 707 646 567 646 353 c 0
+ 646 119 520 -15 265 -15 c 0
+ 215 -15 110 -7 50 29 c 1
+ 39 208 l 1
 EndSplineSet
 EndChar
 EndChars
