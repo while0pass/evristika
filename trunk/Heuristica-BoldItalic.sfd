@@ -8130,7 +8130,7 @@ SplineSet
  517 252 489 341 375 341 c 2
  338 341 l 1
 EndSplineSet
-Kerns2: 268 -42 "LGC kerning subtable"  283 -92 "LGC kerning subtable"  245 -53 "LGC kerning subtable"  33 0 "LGC kerning subtable" 
+Kerns2: 245 -53 "LGC kerning subtable"  283 -92 "LGC kerning subtable"  268 -42 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10024
