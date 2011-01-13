@@ -1,5 +1,5 @@
 #!/usr/bin/env fontforge
-/* Copyright (C) 2008-2010 Andrey V. Panov
+/* Copyright (C) 2008-2011 Andrey V. Panov
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 
 fontname=$1
 bdfname=$2
+_kern_subtable = "LGC kerning subtable"
 SetPref("InstructDiagonalStems",1)
 SetPref("InstructSerifs",1)
 SetPref("InstructBallTerminals",1)
@@ -60,12 +61,16 @@ spaces_dashes.ff()
 case_sub.ff()
 sub_onum.ff(".taboldstyle")
 add_accented.ff()
-same_kern.ff(cursive)
+if (cursive)
+ same_kern.ff("globkern","cursive","copyen")
+else
+ same_kern.ff("globkern","copyen")
+endif
 make_kern.ff(cursive)
 if (smallcap)
  sc_sub.ff()
  anchors_sc.ff()
- same_kern_sc.ff()
+ same_kern_sc.ff("globkern")
  make_kern_sc.ff()
 endif
 liga_sub.ff()
