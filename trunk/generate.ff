@@ -1,95 +1,9 @@
 #!/usr/bin/env fontforge
 /* Copyright (C) 2008-2011 Andrey V. Panov
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
 fontname=$1
-bdfname=$2
-_kern_subtable = "LGC kerning subtable"
-SetPref("InstructDiagonalStems",1)
-SetPref("InstructSerifs",1)
-SetPref("InstructBallTerminals",1)
-SetPref("InterpolateStrongPoints",1)
-SetPref("CounterControl",1)
-SetPref("PreferSpacingAccents",0)
-Open(fontname+".sfd")
-cursive = $italicangle != 0
-smallcap = fontname == "Heuristica-Regular"
-Reencode("unicode")
-SelectSingletons(0u409,0u40A,0u42A,0u42E,0u449,0u44A,0u44E,0u459,0u45A,0u462,0u463,0u472,0u473)
-SelectMoreSingletons(0u492,0u493,0u497,0u49B,0u4A3,0u4BE,0u4BF,0u4F7)
-SelectMore(0u4B0,0u4B3)
-SelectMoreSingletons(0u26E,0u2A1)
-UnlinkReference()
-Select(0u401,0u4FF)
-SelectMoreSingletons(0u255,0u26B,0u26C,0u26E,0u278,0u291,0u2A1,"Euro")
-if (fontname == "Heuristica-Regular")
- SelectMore("afii10018.sc","afii10049.sc")
- SelectMore("A.sc","Z.sc")
-endif
-RemoveOverlap()
-RoundToInt()
-Simplify()
-CanonicalContours()
-CanonicalStart()
-serbsubs.ff()
-if (cursive)
- h_offset = -12
-else
- h_offset = 0
-endif
-add_ipa.ff(h_offset,cursive)
-same_cyrext.ff()
-SelectWorthOutputting()
-DefaultUseMyMetrics()
-SelectNone()
-combining.ff()
-anchors.ff()
-spaces_dashes.ff()
-case_sub.ff()
-sub_onum.ff(".taboldstyle")
-add_accented.ff()
-if (cursive)
- same_kern.ff("globkern","cursive","copyen")
-else
- same_kern.ff("globkern","copyen")
-endif
-make_kern.ff(cursive)
-if (smallcap)
- sc_sub.ff()
- anchors_sc.ff()
- same_kern_sc.ff("globkern")
- make_kern_sc.ff()
-endif
-liga_sub.ff()
-add_subfigs.ff(-390)
-## import BDF files
-/*
-i = 10
-while (i < 25)
- #Print("font-adobe-utopia-75dpi-1.0.1/"+bdfname+ToString(i)+".bdf")
- if (!FileAccess("font-adobe-utopia-75dpi-1.0.1/"+bdfname+ToString(i)+".bdf"))
-  Import("font-adobe-utopia-75dpi-1.0.1/"+bdfname+ToString(i)+".bdf")
- endif
- if (!FileAccess("font-adobe-utopia-100dpi-1.0.1/"+bdfname+ToString(i)+".bdf"))
-  Import("font-adobe-utopia-100dpi-1.0.1/"+bdfname+ToString(i)+".bdf")
- endif
- i++
-endloop
-*/
-#Save(fontname+"_.sfd")
+Open(fontname+"_.sfd")
 Generate(fontname+".otf","ttf",0x200A00,-1)
 #Reencode("AdobeStandardEncoding")
 Generate(fontname+".pfb","",0xa00021)

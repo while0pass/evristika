@@ -86,6 +86,12 @@ fontconfig.
 ChangeLog
 ---------
 
+2011-02-15 Andrey V. Panov
+	Added subscript, superscript and tabular oldstyle figures.
+	Added more vulgar fractions.
+	Added several extended Latin and Cyrillic characters.
+	Version 0.4 is released.
+
 2010-10-28 Andrey V. Panov
 	Added small capitals (basic Latin and Cyrillic) in Regular.
 	Added more phonetic characters to Regular.

@@ -7,7 +7,7 @@ OTFFILES=$(FAMILY)-Regular.otf $(FAMILY)-Italic.otf $(FAMILY)-Bold.otf $(FAMILY)
 TTFFILES=$(FAMILY)-Regular.ttf $(FAMILY)-Italic.ttf $(FAMILY)-Bold.ttf $(FAMILY)-BoldItalic.ttf
 PFBFILES=$(FAMILY)-Regular.pfb $(FAMILY)-Italic.pfb $(FAMILY)-Bold.pfb $(FAMILY)-BoldItalic.pfb
 AFMFILES=$(FAMILY)-Regular.afm $(FAMILY)-Italic.afm $(FAMILY)-Bold.afm $(FAMILY)-BoldItalic.afm
-FFSCRIPTS=generate.ff 
+FFSCRIPTS=generate.ff process.ff
 EXTRAFFSCRIPTS=make_dup_vertshift.ff new_glyph.ff add_anchor_ext.ff \
 	add_anchor_y.ff add_anchor_med.ff anchors.ff combining.ff make_comb.ff \
 	dub_glyph.ff spaces_dashes.ff case_sub.ff add_ipa.ff hflip_glyph.ff \
@@ -33,16 +33,24 @@ docdir=$(prefix)/doc/$(PKGNAME)
 all: $(OTFFILES) ttf
 
 $(FAMILY)-Regular.otf: $(FAMILY)-Regular.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
-	fontforge -lang=ff -script generate.ff $(FAMILY)-Regular UTRG__
+	fontforge -lang=ff -script process.ff $(FAMILY)-Regular UTRG__
+	$(PYTHON) clean_empty_kerns.py -f -i $(FAMILY)-Regular_.sfd -o $(FAMILY)-Regular_.sfd
+	fontforge -lang=ff -script generate.ff $(FAMILY)-Regular
 
 $(FAMILY)-Italic.otf: $(FAMILY)-Italic.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
-	fontforge -lang=ff -script generate.ff $(FAMILY)-Italic UTI___
+	fontforge -lang=ff -script process.ff $(FAMILY)-Italic UTI___
+	$(PYTHON) clean_empty_kerns.py -f -i $(FAMILY)-Italic_.sfd -o $(FAMILY)-Italic_.sfd
+	fontforge -lang=ff -script generate.ff $(FAMILY)-Italic 
 
 $(FAMILY)-Bold.otf: $(FAMILY)-Bold.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
-	fontforge -lang=ff -script generate.ff $(FAMILY)-Bold UTB___
+	fontforge -lang=ff -script process.ff $(FAMILY)-Bold UTB___
+	$(PYTHON) clean_empty_kerns.py -f -i $(FAMILY)-Bold_.sfd -o $(FAMILY)-Bold_.sfd
+	fontforge -lang=ff -script generate.ff $(FAMILY)-Bold 
 
 $(FAMILY)-BoldItalic.otf: $(FAMILY)-BoldItalic.sfd $(FFSCRIPTS) $(EXTRAFFSCRIPTS)
-	fontforge -lang=ff -script generate.ff $(FAMILY)-BoldItalic UTBI__
+	fontforge -lang=ff -script process.ff $(FAMILY)-BoldItalic UTBI__
+	$(PYTHON) clean_empty_kerns.py -f -i $(FAMILY)-BoldItalic_.sfd -o $(FAMILY)-BoldItalic_.sfd
+	fontforge -lang=ff -script generate.ff $(FAMILY)-BoldItalic 
 
 %.pdf: %.otf
 	fntsample -f $< -o $@
