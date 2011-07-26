@@ -20,11 +20,11 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1297687864
+ModificationTime: 1310975028
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
-LineGap: 200
+LineGap: 0
 VLineGap: 0
 Panose: 2 2 8 3 6 6 5 2 2 4
 OS2TypoAscent: 750
@@ -52,7 +52,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 48 16 14
+WinInfo: 400 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 41 [ -242 -230 -168 -168 -190 -190 557 566 ]
@@ -69,7 +69,7 @@ Erode 149 {
 151  0 dtransform dup mul exch dup mul add
 le{pop pop 1.0 1.0}{pop pop 0.0 1.5}ifelse}
 EndPrivate
-BeginChars: 65537 590
+BeginChars: 65537 591
 
 StartChar: space
 Encoding: 32 32 0
@@ -17984,6 +17984,56 @@ SplineSet
  370 443 l 1
 EndSplineSet
 Kerns2: 304 -68 "LGC kerning subtable"  252 -39 "LGC kerning subtable"  299 -29 "LGC kerning subtable"  306 -49 "LGC kerning subtable" 
+EndChar
+
+StartChar: uni01B2
+Encoding: 434 434 590
+Width: 720
+Flags: W
+HStem: -15 46<321.095 466.958> 654 38<29 98.8828 271.117 341> 687 20G<509.5 571.5>
+VStem: 105 160<103.318 646.946> 562 113<180.639 444.124>
+LayerCount: 2
+Back
+SplineSet
+29 654 m 5
+ 29 692 l 5
+ 341 692 l 5
+ 341 654 l 5
+ 273 651 265 646 265 595 c 6
+ 265 211 l 6
+ 265 97 303 31 393 31 c 4
+ 485 31 521 97 521 211 c 6
+ 521 595 l 6
+ 521 646 513 651 445 654 c 5
+ 445 692 l 5
+ 757 692 l 5
+ 757 654 l 5
+ 689 651 681 646 681 595 c 6
+ 681 225 l 6
+ 679 52 578 -15 393 -15 c 4
+ 193 -15 105 52 105 225 c 6
+ 105 595 l 6
+ 105 646 97 651 29 654 c 5
+EndSplineSet
+Fore
+SplineSet
+29 654 m 1xd8
+ 29 692 l 1
+ 341 692 l 1
+ 341 654 l 1xd8
+ 273 651 265 646 265 595 c 2
+ 265 211 l 2
+ 265 97 298 31 393 31 c 0
+ 536 31 562 194 562 336 c 0
+ 562 420 522 508 464 576 c 0
+ 447 596 433 614 433 638 c 0
+ 433 672 474 707 545 707 c 0xb8
+ 598 707 675 539 675 383 c 0
+ 675 203 650 -15 384 -15 c 0
+ 188 -15 105 52 105 225 c 2
+ 105 595 l 2
+ 105 646 97 651 29 654 c 1xd8
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
