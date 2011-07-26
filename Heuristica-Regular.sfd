@@ -20,11 +20,11 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1163929378
-ModificationTime: 1297687868
+ModificationTime: 1310977594
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
-LineGap: 200
+LineGap: 0
 VLineGap: 0
 Panose: 2 2 6 3 5 6 5 2 2 4
 OS2TypoAscent: 750
@@ -32,11 +32,11 @@ OS2TypoAOffset: 0
 OS2TypoDescent: -250
 OS2TypoDOffset: 0
 OS2TypoLinegap: 200
-OS2WinAscent: 930
+OS2WinAscent: 950
 OS2WinAOffset: 0
 OS2WinDescent: 250
 OS2WinDOffset: 0
-HheadAscent: 930
+HheadAscent: 950
 HheadAOffset: 0
 HheadDescent: -250
 HheadDOffset: 0
@@ -52,7 +52,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 48 16 14
+WinInfo: 352 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -230 -190 -190 568 576 732 748 ]
@@ -74,7 +74,7 @@ Grid
  2000 -778 l 0
 EndSplineSet
 TeXData: 1 0 0 235929 117964 78643 513802 1048576 78643 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-BeginChars: 65538 746
+BeginChars: 65538 747
 
 StartChar: space
 Encoding: 32 32 0
@@ -2211,33 +2211,33 @@ DStem2: 331 325 77 613 0.464113 -0.885776<-258.388 0>
 LayerCount: 2
 Fore
 SplineSet
--12 663 m 1
- -12 692 l 1
- 247 692 l 1
- 247 663 l 1
- 188 657 l 2
- 173 655 169 645 177 627 c 0
- 221 531 273 430 331 325 c 1
- 333 325 l 1
- 386 429 454 566 479 626 c 0
- 487 645 485 656 467 658 c 2
- 413 663 l 1
- 413 692 l 1
- 632 692 l 1
- 632 663 l 1
- 565 660 559 652 525 597 c 0
- 494 547 419 407 368 305 c 0
- 358 285 355 270 355 246 c 2
+-12 663 m 5
+ -12 692 l 5
+ 247 692 l 5
+ 247 663 l 5
+ 188 657 l 6
+ 173 655 169 645 177 627 c 4
+ 221 531 273 430 331 325 c 5
+ 333 325 l 5
+ 386 429 454 566 479 626 c 4
+ 487 645 485 656 467 658 c 6
+ 413 663 l 5
+ 413 692 l 5
+ 632 692 l 5
+ 632 663 l 5
+ 565 660 559 652 525 597 c 4
+ 494 547 419 407 368 305 c 4
+ 358 285 355 270 355 246 c 6
  355 93 l 2
  355 38 358 35 461 29 c 1
  461 0 l 1
  150 0 l 1
  150 29 l 1
  253 35 256 38 256 93 c 2
- 256 242 l 2
- 256 262 252 279 241 300 c 0
- 192 399 133 510 77 613 c 0
- 55 655 41 661 -12 663 c 1
+ 256 242 l 6
+ 256 262 252 279 241 300 c 4
+ 192 399 133 510 77 613 c 4
+ 55 655 41 661 -12 663 c 5
 EndSplineSet
 Kerns2: 27 -37 "LGC kerning subtable"  7 36 "LGC kerning subtable"  118 20 "LGC kerning subtable"  14 -90 "LGC kerning subtable"  9 60 "LGC kerning subtable"  13 -50 "LGC kerning subtable"  136 -20 "LGC kerning subtable"  12 -90 "LGC kerning subtable"  26 -50 "LGC kerning subtable"  61 64 "LGC kerning subtable"  93 64 "LGC kerning subtable"  57 12 "LGC kerning subtable"  56 12 "LGC kerning subtable"  55 12 "LGC kerning subtable"  86 -50 "LGC kerning subtable"  54 12 "LGC kerning subtable"  461 -90 "LGC kerning subtable"  85 -54 "LGC kerning subtable"  84 -46 "LGC kerning subtable"  52 12 "LGC kerning subtable"  81 -100 "LGC kerning subtable"  49 -18 "LGC kerning subtable"  79 -90 "LGC kerning subtable"  47 -18 "LGC kerning subtable"  76 10 "LGC kerning subtable"  39 -18 "LGC kerning subtable"  464 -40 "LGC kerning subtable"  463 -40 "LGC kerning subtable"  462 -90 "LGC kerning subtable"  460 -40 "LGC kerning subtable"  69 -90 "LGC kerning subtable"  68 -90 "LGC kerning subtable"  35 -18 "LGC kerning subtable"  65 -68 "LGC kerning subtable"  33 -32 "LGC kerning subtable" 
 EndChar
@@ -28858,7 +28858,7 @@ EndChar
 StartChar: uni01B2
 Encoding: 434 434 726
 Width: 700
-Flags: W
+Flags: WO
 HStem: -15 35<310.259 458.146> 663 29<29 108.046 229.317 308> 687 20G<510 552.5>
 VStem: 119 99<127.762 654.343> 584 67<203.681 490.01>
 LayerCount: 2
@@ -29394,6 +29394,47 @@ SplineSet
  375 656 l 1
 EndSplineSet
 Kerns2: 244 -68 "LGC kerning subtable" 
+EndChar
+
+StartChar: uni0194
+Encoding: 404 404 746
+Width: 589
+Flags: W
+HStem: -14 35<255.38 324.587> 663 29<-8 54.9972 192 249 411 463 560.948 626>
+VStem: 192 49<31.4009 151.183> 335 86<26.694 156.842>
+DStem2: 324 320 264 248 0.434962 -0.900449<-362.201 0 42.5126 52.9592> 326 320 352 273 0.449041 0.893511<0 363.863>
+LayerCount: 2
+Fore
+SplineSet
+241 80 m 0
+ 241 49 260 21 290 21 c 0
+ 317 21 335 37 335 81 c 0
+ 335 103 327 131 294 198 c 1
+ 292 198 l 1
+ 265 157 241 120 241 80 c 0
+-8 663 m 1
+ -8 692 l 1
+ 249 692 l 1
+ 249 663 l 1
+ 192 657 l 2
+ 177 655 173 645 181 627 c 0
+ 225 531 262 452 324 320 c 1
+ 326 320 l 1
+ 379 424 450 566 475 626 c 0
+ 483 645 481 656 463 658 c 2
+ 411 663 l 1
+ 411 692 l 1
+ 626 692 l 1
+ 626 663 l 1
+ 562 660 555 652 521 597 c 0
+ 486 541 412 396 352 273 c 1
+ 399 187 421 146 421 87 c 0
+ 421 4 351 -14 298 -14 c 0
+ 237 -14 192 16 192 87 c 0
+ 192 125 216 166 264 248 c 1
+ 202 380 147 491 81 613 c 0
+ 59 655 45 661 -8 663 c 1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
