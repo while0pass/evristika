@@ -52,7 +52,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 352 16 14
+WinInfo: 48 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -230 -190 -190 568 576 732 748 ]
@@ -335,7 +335,7 @@ SplineSet
  207 585 139 518 89 472 c 1
  72 488 l 1
 EndSplineSet
-Kerns2: 7 -72 "LGC kerning subtable"  14 -130 "LGC kerning subtable"  12 -130 "LGC kerning subtable"  86 -40 "LGC kerning subtable"  84 -75 "LGC kerning subtable"  83 -110 "LGC kerning subtable"  82 -70 "LGC kerning subtable"  77 -70 "LGC kerning subtable"  76 -6 "LGC kerning subtable"  68 -120 "LGC kerning subtable" 
+Kerns2: 81 -70 "LGC kerning subtable"  311 -50 "LGC kerning subtable"  270 -80 "LGC kerning subtable"  247 -60 "LGC kerning subtable"  299 -60 "LGC kerning subtable"  248 -70 "LGC kerning subtable"  69 -70 "LGC kerning subtable"  249 -70 "LGC kerning subtable"  242 -30 "LGC kerning subtable"  236 -110 "LGC kerning subtable"  65 -60 "LGC kerning subtable"  67 -70 "LGC kerning subtable"  79 -70 "LGC kerning subtable"  47 -30 "LGC kerning subtable"  33 -110 "LGC kerning subtable"  7 -72 "LGC kerning subtable"  14 -130 "LGC kerning subtable"  12 -130 "LGC kerning subtable"  86 -40 "LGC kerning subtable"  84 -75 "LGC kerning subtable"  83 -110 "LGC kerning subtable"  82 -70 "LGC kerning subtable"  77 -70 "LGC kerning subtable"  76 -6 "LGC kerning subtable"  68 -120 "LGC kerning subtable" 
 EndChar
 
 StartChar: parenleft
@@ -6724,7 +6724,7 @@ DStem2: 64 98 175 267 0.314023 0.949415<-37.8471 108.35 316.84 397.704> 351 692 
 LayerCount: 2
 Fore
 Refer: 33 65 N 1 0 0 1 0 0 3
-Kerns2: 640 -46 "LGC kerning subtable"  307 -62 "LGC kerning subtable" 
+Kerns2: 7 -120 "LGC kerning subtable"  640 -46 "LGC kerning subtable"  307 -62 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10019
@@ -6875,7 +6875,7 @@ VStem: 49 104<118.85 371.15> 425 104<118.85 371.15>
 LayerCount: 2
 Fore
 Refer: 79 111 N 1 0 0 1 0 0 3
-Kerns2: 119 -22 "LGC kerning subtable"  297 -30 "LGC kerning subtable"  293 -30 "LGC kerning subtable"  301 -16 "LGC kerning subtable"  280 -40 "LGC kerning subtable" 
+Kerns2: 7 -70 "LGC kerning subtable"  119 -22 "LGC kerning subtable"  297 -30 "LGC kerning subtable"  293 -30 "LGC kerning subtable"  301 -16 "LGC kerning subtable"  280 -40 "LGC kerning subtable" 
 EndChar
 
 StartChar: afii10082
@@ -28858,7 +28858,7 @@ EndChar
 StartChar: uni01B2
 Encoding: 434 434 726
 Width: 700
-Flags: WO
+Flags: W
 HStem: -15 35<310.259 458.146> 663 29<29 108.046 229.317 308> 687 20G<510 552.5>
 VStem: 119 99<127.762 654.343> 584 67<203.681 490.01>
 LayerCount: 2
