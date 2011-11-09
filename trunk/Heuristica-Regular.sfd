@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1163929378
-ModificationTime: 1320490922
+ModificationTime: 1320758170
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -52,7 +52,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 57472 16 14
+WinInfo: 64240 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -230 -190 -190 568 576 732 748 ]
@@ -74,7 +74,7 @@ Grid
  2000 -778 l 0
 EndSplineSet
 TeXData: 1 0 0 235929 117964 78643 513802 1048576 78643 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-BeginChars: 65538 752
+BeginChars: 65538 754
 
 StartChar: space
 Encoding: 32 32 0
@@ -2465,13 +2465,13 @@ EndChar
 StartChar: b
 Encoding: 98 98 66
 Width: 598
-Flags: HW
-HStem: -12 35<274.5 350.5 274.5 366.5> -4 21G<90 90> 448 54<318 336.5> 722 20G<177 177>
-VStem: 90 94<151 163 163 321 431 642 642 661> 445 104<176.5 287 154 337>
+Flags: W
+HStem: -12 35<237.49 367.599> 448 54<267.077 380.208> 692 25<20 58> 722 20G<51.4 184> 722 20G<51.4 184>
+VStem: 90 94<70.5311 396.719 431 686.329> 445 104<127.73 372.238>
 LayerCount: 2
 Fore
 SplineSet
-20 692 m 1
+20 692 m 1xf6
  20 717 l 1
  177 742 l 1
  184 736 l 1
@@ -2480,14 +2480,14 @@ SplineSet
  536 502 549 318 549 256 c 0
  549 52 433 -12 300 -12 c 0
  225 -12 183 7 148 27 c 1
- 108 -12 l 1xbc
- 90 -4 l 1x7c
+ 108 -12 l 1
+ 90 -4 l 1
  90 642 l 2
  90 680 84 685 58 688 c 2
- 20 692 l 1
+ 20 692 l 1xf6
 184 163 m 2
  184 139 185 118 191 100 c 0
- 209 50 248 23 301 23 c 0xbc
+ 209 50 248 23 301 23 c 0
  400 23 445 103 445 250 c 0
  445 424 357 448 316 448 c 0
  260 448 218 426 194 378 c 0
@@ -2763,7 +2763,7 @@ EndChar
 StartChar: i
 Encoding: 105 105 73
 Width: 291
-Flags: HW
+Flags: W
 HStem: 0 29<32 99.0117 209.325 276> 452 25<37 75> 482 20<68.4 201> 593 122<105.183 200.817>
 VStem: 92 122<606.183 701.817> 107 94<35.6418 444.937>
 LayerCount: 2
@@ -2784,7 +2784,7 @@ EndChar
 StartChar: j
 Encoding: 106 106 74
 Width: 280
-Flags: HW
+Flags: W
 HStem: -242 24<-31 5.58278> 452 25<36 74> 482 20<67.4 200> 593 122<105.183 200.817>
 VStem: 92 122<606.183 701.817> 106 94<-129.337 444.814>
 LayerCount: 2
@@ -3112,31 +3112,31 @@ EndChar
 StartChar: r
 Encoding: 114 114 82
 Width: 389
-Flags: HW
-HStem: 0 29<32 296 32 32> 397 105<337.5 352> 424 78<189 266>
-VStem: 107 94<87 321>
+Flags: W
+HStem: 0 29<32 98.338 211.86 296> 424 78<246.5 355.665> 452 25<37 75>
+VStem: 107 94<37.6307 402.859>
 LayerCount: 2
 Fore
 SplineSet
-32 0 m 1xb0
+32 0 m 1xd0
  32 29 l 1
  102 34 107 36 107 87 c 2
  107 402 l 2
  107 438 101 443 75 447 c 2
  37 452 l 1
- 37 477 l 1
+ 37 477 l 1xb0
  189 502 l 1
  201 422 l 1
- 267 480 297 502 333 502 c 0xb0
+ 267 480 297 502 333 502 c 0
  372 502 386 475 386 453 c 0
- 386 422 364 397 340 397 c 0xd0
+ 386 422 364 397 340 397 c 0
  335 397 327 398 320 402 c 0
  291 418 274 424 258 424 c 0
  235 424 201 398 201 321 c 2
  201 87 l 2
  201 36 207 34 296 29 c 1
  296 0 l 1
- 32 0 l 1xb0
+ 32 0 l 1xd0
 EndSplineSet
 Kerns2: 27 10 "LGC kerning subtable"  7 -20 "LGC kerning subtable"  118 -20 "LGC kerning subtable"  14 -60 "LGC kerning subtable"  13 -20 "LGC kerning subtable"  12 -60 "LGC kerning subtable"  26 10 "LGC kerning subtable"  90 10 "LGC kerning subtable"  89 18 "LGC kerning subtable"  88 12 "LGC kerning subtable"  87 18 "LGC kerning subtable"  86 18 "LGC kerning subtable"  461 -20 "LGC kerning subtable"  85 8 "LGC kerning subtable"  84 8 "LGC kerning subtable"  81 -6 "LGC kerning subtable"  79 -6 "LGC kerning subtable"  78 8 "LGC kerning subtable"  77 8 "LGC kerning subtable"  75 -6 "LGC kerning subtable"  73 8 "LGC kerning subtable"  72 6 "LGC kerning subtable"  71 -6 "LGC kerning subtable"  70 8 "LGC kerning subtable"  464 -20 "LGC kerning subtable"  463 -20 "LGC kerning subtable"  462 -20 "LGC kerning subtable"  460 -20 "LGC kerning subtable"  399 -20 "LGC kerning subtable"  398 -20 "LGC kerning subtable"  397 -20 "LGC kerning subtable"  69 -20 "LGC kerning subtable"  68 -20 "LGC kerning subtable"  67 -20 "LGC kerning subtable"  65 -10 "LGC kerning subtable" 
 EndChar
@@ -29617,7 +29617,7 @@ EndChar
 
 StartChar: ffi
 Encoding: 64259 64259 749
-Width: 610
+Width: 929
 Flags: HMW
 HStem: 0 29<32 99.0117 210.247 296 351 418.012 528.41 605 670 737.012 847.325 914> 450 40<30 107 201 426 520 741.126> 692 35<213.757 281.702> 707 35<577.352 698.247>
 VStem: 107 94<36.5855 450 490 643.093> 426 94<35.8118 450 490 620.364> 745 94<35.6418 449.145>
@@ -29678,7 +29678,7 @@ EndChar
 
 StartChar: ffl
 Encoding: 64260 64260 750
-Width: 610
+Width: 929
 Flags: HMW
 HStem: 0 29<32 99.0117 210.247 296 351 418.012 529.247 615 670 737.012 847.325 914> 450 40<30 107 201 426 520 642> 692 35<213.757 281.702> 707 35<575.621 699.97>
 VStem: 107 94<36.5855 450 490 643.093> 426 94<36.5855 450 490 630.71> 745 94<35.6418 670.901>
@@ -29822,6 +29822,113 @@ SplineSet
  201 35 207 34 276 29 c 1
  276 0 l 1
  32 0 l 1xbe
+EndSplineSet
+EndChar
+
+StartChar: f_b
+Encoding: 57490 57490 752
+Width: 917
+Flags: MW
+HStem: -12 35<556.49 686.599> 0 29<32 99.0117 209.721 282> 448 54<586.077 699.208> 450 40<30 107 201 313> 707 35<255.14 365.926>
+VStem: 107 94<36.247 450 490 626.475> 409 94<70.5311 396.719 431 670.901> 764 104<127.73 372.238>
+LayerCount: 2
+Fore
+SplineSet
+30 450 m 1x5f
+ 30 490 l 1
+ 107 490 l 1x5f
+ 107 511 l 2
+ 107 655 180 742 315 742 c 0
+ 363 742 406 730 434 714 c 1
+ 496 742 l 1
+ 503 736 l 1
+ 503 431 l 1
+ 540 453 599 502 675 502 c 0
+ 855 502 868 318 868 256 c 0
+ 868 52 752 -12 619 -12 c 0
+ 544 -12 502 7 467 27 c 1
+ 427 -12 l 1xaf
+ 409 -4 l 1
+ 409 630 l 17
+ 394 682 350 707 310 707 c 0
+ 261 707 201 679 201 523 c 2
+ 201 490 l 1
+ 313 490 l 1
+ 313 450 l 1
+ 201 450 l 1
+ 201 86 l 2
+ 201 35 207 34 282 29 c 1
+ 282 0 l 1
+ 32 0 l 1
+ 32 29 l 1
+ 104 34 107 36 107 87 c 2
+ 107 450 l 1
+ 30 450 l 1x5f
+503 163 m 2
+ 503 139 504 118 510 100 c 0
+ 528 50 567 23 620 23 c 0
+ 719 23 764 103 764 250 c 0
+ 764 424 676 448 635 448 c 0xaf
+ 579 448 537 426 513 378 c 0
+ 505 362 503 346 503 321 c 2
+ 503 163 l 2
+EndSplineSet
+EndChar
+
+StartChar: f_k
+Encoding: 57499 57499 753
+Width: 843
+Flags: MW
+HStem: 0 29<32 99.0117 209.219 276 339 405.001 516.325 583 811.772 857> 450 40<30 107 201 313> 462 28<761.173 827> 707 35<259.256 370.152>
+VStem: 107 94<35.7852 450 490 622.552> 414 94<36.1016 254 268 670.901>
+LayerCount: 2
+Fore
+SplineSet
+30 450 m 1xdc
+ 30 490 l 1
+ 107 490 l 1xdc
+ 107 511 l 2
+ 107 648 182 742 319 742 c 0
+ 367 742 410 730 438 714 c 1
+ 500 742 l 1
+ 508 736 l 1
+ 508 268 l 1
+ 510 268 l 1
+ 533 302 632 426 661 461 c 0
+ 681 485 690 490 724 490 c 2
+ 827 490 l 1
+ 827 462 l 1xbc
+ 769 456 744 444 710 419 c 0
+ 676 394 644 365 596 310 c 0
+ 586 299 588 294 593 287 c 0
+ 631 233 709 138 771 77 c 0
+ 802 46 827 31 857 23 c 1
+ 857 -5 l 1
+ 782 -2 l 2
+ 750 0 711 12 674 49 c 0
+ 622 102 551 189 510 254 c 1
+ 508 254 l 1
+ 508 87 l 2
+ 508 36 512 34 583 29 c 1
+ 583 0 l 1
+ 339 0 l 1
+ 339 29 l 1
+ 408 34 414 36 414 87 c 2
+ 414 630 l 1
+ 399 682 354 707 314 707 c 0
+ 260 707 201 670 201 523 c 2
+ 201 490 l 1
+ 313 490 l 1
+ 313 450 l 1
+ 201 450 l 1
+ 201 86 l 2
+ 201 35 207 34 276 29 c 1
+ 276 0 l 1
+ 32 0 l 1
+ 32 29 l 1
+ 104 34 107 36 107 87 c 2
+ 107 450 l 1
+ 30 450 l 1xdc
 EndSplineSet
 EndChar
 EndChars
