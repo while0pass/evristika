@@ -86,6 +86,13 @@ fontconfig.
 ChangeLog
 ---------
 
+2011-12-28 Andrey V. Panov
+	Added panose values.
+	Changed Win and HHead OS/2 metrics.
+	Added more ligatures with "f" and "longs".
+	Added "beta", "gamma", "lambda", "theta", "chi" to Regular;
+	Version 1.0 is released.
+
 2011-02-15 Andrey V. Panov
 	Added subscript, superscript and tabular oldstyle figures.
 	Added more vulgar fractions.
