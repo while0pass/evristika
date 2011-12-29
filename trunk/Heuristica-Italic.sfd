@@ -4,7 +4,7 @@ FullName: Heuristica Italic
 FamilyName: Heuristica
 Weight: Regular
 Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008, 2009, 2010 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
-Version: 0.4
+Version: 1.0
 ItalicAngle: -13
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,13 +19,13 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1324803974
+ModificationTime: 1325065904
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
 LineGap: 0
 VLineGap: 0
-Panose: 2 2 6 3 5 6 5 9 2 4
+Panose: 2 2 6 3 5 7 5 9 2 4
 OS2TypoAscent: 750
 OS2TypoAOffset: 0
 OS2TypoDescent: -250
