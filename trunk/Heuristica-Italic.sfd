@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1325065904
+ModificationTime: 1325728276
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 57440 16 14
+WinInfo: 1072 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -242 -190 -190 568 576 732 748 ]
@@ -10153,7 +10153,7 @@ DStem2: 106 -12 198 0 0.224951 0.97437<32.3879 477.044>
 LayerCount: 2
 Fore
 Refer: 124 180 N 1 0 0 1 40 0 2
-Refer: 321 63172 N 1 0 0 1 0 0 2
+Refer: 321 63172 N 1 0 0 1 0 0 3
 EndChar
 
 StartChar: afii10052
