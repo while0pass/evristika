@@ -3,7 +3,7 @@ FontName: Heuristica-BoldItalic
 FullName: Heuristica Bold Italic
 FamilyName: Heuristica
 Weight: Bold
-Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008, 2009, 2010 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
+Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008-2012 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
 Version: 1.0
 ItalicAngle: -13
 UnderlinePosition: -100
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1325065919
+ModificationTime: 1329308448
 PfmFamily: 17
 TTFWeight: 700
 TTFWidth: 5
@@ -43,7 +43,7 @@ OS2Vendor: 'PfEd'
 Lookup: 258 0 0 "LGC kerning"  {"LGC kerning subtable"  } ['kern' ('cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-LangName: 1033 "" "" "Bold Italic" "" "" "" "" "" "" "" "" "" "" "+AAoA-Copyright (c) 2008, 2009 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" 
+LangName: 1033 "" "" "Bold Italic" "" "" "" "" "" "" "" "" "" "" "+AAoA-Copyright (c) 2008-2012 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" 
 LangName: 1049 "" "+BC0EMgRABDgEQQRCBDgEOgQw" 
 Encoding: UnicodeBmp
 UnicodeInterp: none
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 80 16 14
+WinInfo: 1072 16 14
 BeginPrivate: 9
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 31 [ -242 -230 -190 -190 557 566 ]
@@ -7838,7 +7838,7 @@ SplineSet
  169 494 l 1
  206 654 l 1
  275 694 383 707 433 707 c 0
- 644 707 702 518 702 410 c 0
+ 651 707 702 518 702 410 c 0
  702 354 683 208 582 90 c 0
  520 18 447 -15 276 -15 c 0
  141 -15 65 55 65 126 c 0
@@ -9313,78 +9313,12 @@ EndChar
 StartChar: afii10086
 Encoding: 1092 1092 312
 Width: 834
-Flags: MW
+Flags: HMW
 HStem: -242 46<235.948 292.705> -12 45<168 308.118 534.558 625.614> 456 46<313.533 407.068 632.882 773> 696 46<650.295 707.052>
 VStem: 74 148<55.3489 285.652> 719 148<204.348 434.651>
 DStem2: 288.368 -242 427.671 -242 0.224951 0.97437<134.775 906.578> 426.256 -242 426.896 -242 0.224951 0.97437<276.22 688.612 700.116 711.391>
 LayerCount: 2
 Back
-SplineSet
-107 -168 m 4
- 107 -137 135 -109 167 -109 c 4
- 189 -109 197 -125 206 -140 c 4
- 230 -182 243 -196 253 -196 c 4
- 261 -196 268 -187 272 -169 c 6
- 395 442 l 5
- 306 442 l 5
- 320 490 l 5
- 406 490 l 5
- 413 516 l 6
- 428 571 449 629 488 674 c 4
- 524 715 575 743 646 742 c 4
- 733 741 789 700 789 654 c 4
- 789 618 751 594 720 594 c 4
- 696 594 686 608 678 624 c 4
- 651 682 638 696 623 696 c 4
- 607 696 597 678 587 636 c 6
- 552 490 l 5
- 680 490 l 5
- 668 442 l 5
- 543 442 l 5
- 446 28 l 6
- 404 -151 348 -239 227 -242 c 4
- 150 -242 107 -210 107 -168 c 4
-31 245 m 0
- 71 415 162 502 322 502 c 0
- 355 502 376 492 400 459 c 1
- 401 459 l 1
- 377 355 l 1
- 394 430 347 456 329 456 c 0
- 264 456 210 330 190 245 c 0
- 171 160 167 34 232 34 c 0
- 250 34 312 75 326 135 c 1
- 302 31 l 1
- 301 31 l 1
- 262 -2 236 -12 203 -12 c 0
- 43 -12 -8 75 31 245 c 0
-159 -230 m 1
- 168 -192 l 1
- 241 -189 252 -185 262 -143 c 2
- 438 621 l 2
- 448 661 442 670 426 673 c 2
- 393 679 l 1
- 401 715 l 1
- 610 742 l 1
- 616 736 l 1
- 413 -143 l 2
- 403 -185 412 -189 485 -192 c 1
- 476 -230 l 1
- 159 -230 l 1
-822 245 m 0
- 783 75 692 -12 532 -12 c 0
- 499 -12 477 -2 454 31 c 1
- 453 31 l 1
- 477 135 l 1
- 463 75 507 34 525 34 c 0
- 590 34 644 160 663 245 c 0
- 683 330 687 456 622 456 c 0
- 604 456 545 430 528 355 c 1
- 552 459 l 1
- 553 459 l 1
- 591 492 618 502 651 502 c 0
- 811 502 862 415 822 245 c 0
-EndSplineSet
-Fore
 SplineSet
 74 161 m 0
  74 333 195 502 351 502 c 0
@@ -9437,6 +9371,56 @@ SplineSet
  584 429 l 1
  607 480 657 502 720 502 c 0
  826 502 867 430 867 329 c 0
+EndSplineSet
+Fore
+SplineSet
+74 161 m 0
+ 74 333 195 502 351 502 c 0
+ 386 502 427 496 450 463 c 1
+ 452 463 l 1
+ 452 463 458 491 459 497 c 2
+ 465 524 l 2
+ 477 578 507 633 539 674 c 0
+ 575 720 629 742 702 742 c 0
+ 800 742 830 693 830 647 c 0
+ 830 607 801 592 763 592 c 0
+ 740 592 731 598 724 624 c 0
+ 709 678 702 696 680 696 c 0
+ 651 696 634 651 617 579 c 2
+ 594 481 l 2
+ 588 455 581 429 581 429 c 1
+ 584 429 l 1
+ 607 480 657 502 720 502 c 0
+ 826 502 867 430 867 329 c 0
+ 867 157 746 -12 590 -12 c 0
+ 555 -12 514 -6 491 27 c 1
+ 489 27 l 1
+ 489 27 483 -1 482 -7 c 2
+ 478 -24 l 2
+ 466 -78 436 -133 404 -174 c 0
+ 368 -220 314 -242 241 -242 c 0
+ 143 -242 113 -193 113 -147 c 0
+ 113 -107 142 -92 180 -92 c 0
+ 203 -92 212 -98 219 -124 c 0
+ 234 -178 241 -196 263 -196 c 0
+ 292 -196 309 -151 326 -79 c 2
+ 347 9 l 2
+ 351.115 26.8313 356.641 48.8957 359.707 61 c 1
+ 357 61 l 1
+ 334 10 284 -12 221 -12 c 0
+ 115 -12 74 60 74 161 c 0
+222 121 m 0
+ 222 80 229 33 269 33 c 0
+ 311.753 33 373.462 136.803 391.523 199.48 c 1
+ 432 377 l 1
+ 429 424 393 456 362 456 c 0
+ 262 456 222 236 222 121 c 0
+509 113 m 1
+ 512 66 548 34 579 34 c 0
+ 679 34 719 254 719 369 c 0
+ 719 410 712 457 672 457 c 0
+ 629.134 457 567.212 352.647 549.334 290.023 c 1
+ 509 113 l 1
 EndSplineSet
 EndChar
 

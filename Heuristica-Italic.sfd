@@ -3,7 +3,7 @@ FontName: Heuristica-Italic
 FullName: Heuristica Italic
 FamilyName: Heuristica
 Weight: Regular
-Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008, 2009, 2010 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
+Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008-2012 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
 Version: 1.0
 ItalicAngle: -13
 UnderlinePosition: -100
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1164221255
-ModificationTime: 1325728276
+ModificationTime: 1329307995
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -44,14 +44,14 @@ Lookup: 258 0 0 "LGC kerning"  {"LGC kerning subtable" [150,15,0] } ['kern' ('cy
 MarkAttachClasses: 1
 DEI: 91125
 LangName: 1049 "" "+BC0EMgRABDgEQQRCBDgEOgQw" 
-LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.+AAoA-Utopia is either a registered trademark or trademark of Adobe Systems+AAoA-Incorporated in the United States and/or other countries. Used under+AAoA-license.+AAoACgAA-Copyright (c) 2008, 2009 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" "http://scripts.sil.org/ofl" 
+LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.+AAoA-Utopia is either a registered trademark or trademark of Adobe Systems+AAoA-Incorporated in the United States and/or other countries. Used under+AAoA-license.+AAoACgAA-Copyright (c) 2008-2012 Andrey V. Panov (panov@canopus.iacp.dvo.ru), +AAoA-with Reserved Font Name Heuristica.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied together with this font package in OFL.txt, +AAoA-and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL" "http://scripts.sil.org/ofl" 
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 1072 16 14
+WinInfo: 1008 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -242 -190 -190 568 576 732 748 ]
@@ -8937,12 +8937,12 @@ SplineSet
  172 130 162 107 162 89 c 0
  162 56 196 20 267 20 c 0
  448 20 534 300 534 451 c 0
- 534 567 459 672 379 672 c 0
+ 534 567 468 672 379 672 c 0
  305 672 237 645 181 496 c 1
  149 496 l 1xec
  188 666 l 1
  238 687 287 707 379 707 c 0
- 526 707 639 565 639 421 c 0
+ 548 707 639 565 639 421 c 0
  639 338 612 200 529 105 c 0
  468 35 399 -15 255 -15 c 0
  194 -15 61 30 61 122 c 0xf4
