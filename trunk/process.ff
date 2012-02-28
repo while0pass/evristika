@@ -45,6 +45,16 @@ Simplify()
 CanonicalContours()
 CanonicalStart()
 serbsubs.ff()
+ewe_table="Ewe substitutions"
+ewe_subtable="Ewe substitutions subtable"
+AddLookup(ewe_table, "gsub_single", 0, [["locl",[["latn",["EWE "]]]]])
+AddLookupSubtable(ewe_table, ewe_subtable)
+if (WorthOutputting("uni0192.alt") && InFont("uni0192.alt"))
+ Select("uni0192"); AddPosSub(ewe_subtable,"uni0192.alt")
+endif
+if (WorthOutputting("f.alt") && InFont("f.alt"))
+ Select("f"); AddPosSub(ewe_subtable,"f.alt")
+endif
 if (cursive)
  h_offset = -12
 else
