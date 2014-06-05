@@ -4,7 +4,7 @@ FullName: Heuristica Regular
 FamilyName: Heuristica
 Weight: Regular
 Copyright: Copyright (c) 1989, 1991 Adobe Systems Incorporated.  All Rights Reserved. Utopia is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries. Used under license. The Utopia fonts are freely available; see http://tug.org/fonts/utopia.\n\nCopyright (c) 2008-2012 Andrey V. Panov (panov@canopus.iacp.dvo.ru).\n
-Version: 1.0.1
+Version: 1.0.2
 ItalicAngle: 0
 UnderlinePosition: -100
 UnderlineWidth: 50
@@ -19,7 +19,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1163929378
-ModificationTime: 1330773577
+ModificationTime: 1401966558
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 65328 16 14
+WinInfo: 8352 16 14
 BeginPrivate: 11
 BlueValues 41 [ -15 0 692 707 490 502 668 680 742 742 ]
 OtherBlues 39 [ -242 -230 -190 -190 568 576 732 748 ]
@@ -73,7 +73,7 @@ Grid
  2000 -778 l 0
 EndSplineSet
 TeXData: 1 0 0 235929 117964 78643 513802 1048576 78643 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-BeginChars: 65542 883
+BeginChars: 65542 884
 
 StartChar: space
 Encoding: 32 32 0
@@ -8094,9 +8094,9 @@ EndChar
 StartChar: afii10033
 Encoding: 1055 1055 283
 Width: 788
-Flags: MW
-HStem: 0 29<35 114.046 234.954 314 474 553.046 673.954 753> 657 35<224 564>
-VStem: 125 99<37.6573 648.958> 564 99<37.6573 648.958>
+Flags: W
+HStem: 0 29<35 114.046 234.954 314 474 553.046 673.954 753> 657 35<35 120.879 229.576 558.424 667.121 753>
+VStem: 125 99<37.6573 652.43> 564 99<37.6573 652.43>
 LayerCount: 2
 Back
 SplineSet
@@ -8132,32 +8132,24 @@ SplineSet
 EndSplineSet
 Fore
 SplineSet
-564 657 m 1
- 224 657 l 1
- 224 692 l 1
- 564 692 l 1
- 564 657 l 1
-753 0 m 1
- 474 0 l 1
- 474 29 l 1
- 562 35 564 37 564 93 c 2
- 564 602 l 2
- 564 654 554 657 484 657 c 1
- 484 692 l 1
- 753 692 l 1
- 753 663 l 1
- 665 657 663 655 663 599 c 2
- 663 93 l 2
- 663 37 665 35 753 29 c 1
- 753 0 l 1
 35 0 m 1
  35 29 l 1
  123 35 125 37 125 93 c 2
  125 599 l 2
  125 655 123 657 35 663 c 1
  35 692 l 1
- 304 692 l 1
- 304 657 l 1
+ 753 692 l 1
+ 753 663 l 1
+ 665 657 663 655 663 599 c 2
+ 663 93 l 2
+ 663 37 665 35 753 29 c 1
+ 753 0 l 1
+ 474 0 l 1
+ 474 29 l 1
+ 562 35 564 37 564 93 c 2
+ 564 602 l 2
+ 564 654 554 657 484 657 c 2
+ 304 657 l 2
  234 657 224 654 224 602 c 2
  224 93 l 2
  224 37 226 35 314 29 c 1
@@ -32911,6 +32903,50 @@ SplineSet
  243 -91 235 -144 212 -179 c 0
  187 -217 149 -242 94 -242 c 0
  16 -242 -28 -203 -28 -171 c 0
+EndSplineSet
+EndChar
+
+StartChar: uni20BD
+Encoding: 8381 8381 883
+Width: 530
+Flags: W
+HStem: 0 29<30 104.977 218 302> 216 35<28 115 206 395> 308 35<28 115 208.109 341.469> 633 35<30 111.315 207.719 345.871>
+VStem: 115 91<38.8129 216 251 308 345.106 630.343> 404 102<400.323 581.629>
+LayerCount: 2
+Fore
+SplineSet
+30 0 m 1
+ 30 29 l 1
+ 114 35 115 37 115 93 c 2
+ 115 216 l 1
+ 28 216 l 1
+ 28 251 l 1
+ 115 251 l 1
+ 115 308 l 1
+ 28 308 l 1
+ 28 343 l 1
+ 115 343 l 1
+ 115 575 l 2
+ 115 631 114 633 30 639 c 1
+ 30 668 l 1
+ 276 668 l 2
+ 393 668 506 634 506 494 c 0
+ 506 338 379 308 243 308 c 2
+ 206 308 l 1
+ 206 251 l 1
+ 395 251 l 1
+ 395 216 l 1
+ 206 216 l 1
+ 206 93 l 2
+ 206 37 206 37 302 29 c 1
+ 302 0 l 1
+ 30 0 l 1
+206 379 m 2
+ 206 348 215 343 260 343 c 0
+ 335 343 404 368 404 489 c 0
+ 404 593 357 633 262 633 c 0
+ 212 633 206 626 206 599 c 2
+ 206 379 l 2
 EndSplineSet
 EndChar
 EndChars
